@@ -240,70 +240,6 @@ footer a:hover {
   color: #ffd700;
 }
 
-
-/* .notification-box {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 300px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.notification-box.collapsed {
-  width: 150px;
-  padding: 10px;
-}
-
-.collapse-button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-}
- */
- /* src/App.css */
-/* ... (previous styles) */
-
-/* .notification-box {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: width 0.3s;
-}
-
-.notification-box.collapsed {
-  width: 50px;
-}
-
-.collapse-button {
-  display: block;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-}
-
-.notification-content {
-  padding: 10px;
-}
-  */
-/* src/App.css */
-/* ... (previous styles) */
-
 .notification-box {
   position: fixed;
   bottom: 20px;
@@ -334,7 +270,7 @@ footer a:hover {
   
 }
 .collapse-button:hover {
-  background-color: #34495e; /* Adjust the hover background color */
+  background-color: #34495e; 
 }
 
 .notification-content {
@@ -371,7 +307,7 @@ footer a:hover {
   transform: translate(-50%, -50%);
   font-size: 2em;
   color: #fff;
-  z-index: 1; /* Bring the text above the overlay layer */
+  z-index: 1;
 }
 
 
