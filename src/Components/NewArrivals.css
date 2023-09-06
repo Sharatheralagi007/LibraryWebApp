@@ -1,0 +1,17 @@
+
+.new-arrivals {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.new-arrivals h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.new-arrivals-container {
+  /* Set the width for new arrivals (50% of the screen width) */
+  width: 50%;
+  /* Add additional styles as needed */
+}

@@ -6,6 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import NotificationComponent from './Components/NotificationBox';
 import LibraryRules from './Components/LibraryRules';
+import NewArrivals from './Components/NewArrivals';
+import Testimonials from './Components/Testimonials';
+import './Home.css'
+import DailyQuote from './Components/DailyQuote';
 
 
 function Home() {
@@ -36,6 +40,11 @@ function Home() {
           <li><a href='#employee-table'>Staff</a></li>
         </ul>
       </nav> */}
+      <DailyQuote/>
+      <main className="flex-container">
+          <NewArrivals /> {/* Include the NewArrivals component */}
+          <Testimonials /> {/* Include the Testimonials component */}
+        </main>
       
       <section id="welcome">
         <h2>Welcome to the Library and Information Center</h2>

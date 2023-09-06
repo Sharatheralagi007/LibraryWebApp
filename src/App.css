@@ -415,3 +415,11 @@ footer a:hover {
 .dropdown-content a:hover {
   background-color: #f4f4f4;
 }
+/* Assuming a class name for your logo container */
+/* Assuming a class name for your logo container */
+.logo img {
+  max-width: 1000px; /* Adjust the maximum width as needed */
+  height: auto; /* Allow the image to adjust its height proportionally */
+  vertical-align: middle; /* Center the image vertically within the container */
+}
+

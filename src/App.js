@@ -23,7 +23,7 @@ function App() {
     <Router>
     <nav class="navbar">
   <div class="logo">
-    <a href="#">Library</a>
+    {/* <img src='Logos-01.png'/> */}
   </div>
   <ul class="nav-links">
     <li><Link to='/'>Home</Link></li>

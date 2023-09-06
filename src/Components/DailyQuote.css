@@ -1,0 +1,23 @@
+
+  /* Add these styles to your CSS file */
+.daily-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+  }
+  
+  .refresh-icon {
+    width: 24px; /* Adjust the width and height as needed */
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Add a smooth hover effect */
+  }
+  
+  .refresh-icon:hover {
+    transform: rotate(360deg); /* Rotate the icon on hover */
+  }
+  
