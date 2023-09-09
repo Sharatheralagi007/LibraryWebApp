@@ -1,37 +1,92 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
-// const express = require('express');
-// const fetch = require('node-fetch');
-// const app = express();
-// const port = process.env.PORT || 5000;
+const app = express();
+const port = 3000;
 
-// app.use(express.json());
+mongoose.connect('mongodb://localhost:27017/your-database-name', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-// // Set up a route to proxy the API request
-// app.get('/api/daily-quote', async (req, res) => {
-//   try {
-//     // Fetch the daily quote from the API
-//     const response = await fetch('https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731',{
-//         method: 'GET',
-//         headers: {
-//             'X-RapidAPI-Key': '7c9714d22emshc2352da39dbdaa3p1b9e22jsn3b4549331f80',
-//             'X-RapidAPI-Host': 'healthruwords.p.rapidapi.com'
-//         }
-//     });
-//     const data = await response.json();
+const Notification = require('./notificationModel');
 
-//     // Check if the response contains a quote
-//     if (data.contents && data.contents.quotes && data.contents.quotes.length > 0) {
-//       const quote = data.contents.quotes[0].quote;
-//       res.json({ dailyQuote: quote });
-//     } else {
-//       res.status(404).json({ error: 'No quote available today.' });
-//     }
-//   } catch (error) {
-//     console.error('Error fetching daily quote:', error);
-//     res.status(500).json({ error: 'Failed to fetch the daily quote.' });
-//   }
-// });
+app.use(bodyParser.json());
 
-// app.listen(port, () => {
-//   console.log(`Server is running on port ${port}`);
-// });
+// Create a new notification
+app.post('/notifications', async (req, res) => {
+  const { title, content } = req.body;
+
+  try {
+    const newNotification = new Notification({ title, content });
+    const savedNotification = await newNotification.save();
+    res.status(201).json(savedNotification);
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to create notification' });
+  }
+});
+
+// Get all notifications
+app.get('/notifications', async (req, res) => {
+  try {
+    const notifications = await Notification.find();
+    res.json(notifications);
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to retrieve notifications' });
+  }
+});
+
+// Get a specific notification by ID
+app.get('/notifications/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const notification = await Notification.findById(id);
+    if (!notification) {
+      return res.status(404).json({ message: 'Notification not found' });
+    }
+    res.json(notification);
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to retrieve notification' });
+  }
+});
+
+// Update a notification by ID
+app.put('/notifications/:id', async (req, res) => {
+  const { id } = req.params;
+  const { title, content } = req.body;
+
+  try {
+    const updatedNotification = await Notification.findByIdAndUpdate(
+      id,
+      { title, content },
+      { new: true } // Return the updated notification
+    );
+    if (!updatedNotification) {
+      return res.status(404).json({ message: 'Notification not found' });
+    }
+    res.json(updatedNotification);
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to update notification' });
+  }
+});
+
+// Delete a notification by ID
+app.delete('/notifications/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const deletedNotification = await Notification.findByIdAndRemove(id);
+    if (!deletedNotification) {
+      return res.status(404).json({ message: 'Notification not found' });
+    }
+    res.json({ message: 'Notification deleted' });
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to delete notification' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});

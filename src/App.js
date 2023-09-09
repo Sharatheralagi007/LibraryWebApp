@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
-import notifications from './notifications';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import NotificationComponent from './Components/NotificationBox';
-import LibraryRules from './Components/LibraryRules';
+
 import { BrowserRouter as Router, Route,  Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Home from './Home';
 import LibraryFAQ from './Components/LibraryFAQ';
 import Catalog from './Components/Catalog';
 import About from './Components/About';
+import NotificationManager from './Components/NotificationManager';
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const toggleCollapse = () => {
@@ -58,6 +55,7 @@ function App() {
         <Route path='/faq' Component={LibraryFAQ}/>
         <Route path='/catalog' Component={Catalog}/>
         <Route path='/about' Component={About}/>
+        <Route path='/managenotifications' Component={NotificationManager}/>
       </Routes>
     </Router>
     </>
