@@ -1,28 +1,74 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors =require('cors')
+const connectDB = require('../public/DB/Dbconnect');
+const Notification = require('../public/DB/Schema');
+// const Notification = require('../pu');
 
+connectDB()
 const app = express();
-const port = 3000;
+const port = 5000;
 
-mongoose.connect('mongodb://localhost:27017/your-database-name', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect('mongodb://localhost:27017/your-database-name', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+const allowedOrigin = 'http://localhost:5001';
 
-const Notification = require('./notificationModel');
+const corsOptions = {
+  origin: allowedOrigin,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add the HTTP methods you intend to support
+  credentials: true, // If you need to support cookies or authentication headers
+};
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
 // Create a new notification
-app.post('/notifications', async (req, res) => {
-  const { title, content } = req.body;
+// app.post('/notifications', async (req, res) => {
+//   console.log(req.body.title)
+  
+//   try {
+    
+//     const newNotification = new Notification({
+//       title: req.body.title,
+//       content: req.body.content,
+//     });
 
+//     // Save the notification to the database
+//     await newNotification.save();
+//     console.log('ji')
+//     res.status(201).json(newNotification);
+//   } catch (error) {
+//     console.error('Error creating notification:', error);
+//     res.status(500).json({ message: 'Failed to create notification' });
+//   }
+// });
+app.post('/notifications', async (req, res) => {
   try {
-    const newNotification = new Notification({ title, content });
-    const savedNotification = await newNotification.save();
-    res.status(201).json(savedNotification);
+    const { title, content } = req.body;
+
+    // Create a new notification document and save it to the database
+    const newNotification = await Notification.create({
+      title,
+      content,
+    });
+
+    if (newNotification) {
+      res.status(201).json({
+        _id: newNotification._id,
+        title: newNotification.title,
+        content: newNotification.content,
+        createdAt: newNotification.createdAt, // Assuming you have a createdAt field
+      });
+    } else {
+      res.status(400);
+      throw new Error("Failed to create a new notification");
+    }
   } catch (error) {
+    console.error('Error creating notification:', error);
     res.status(500).json({ message: 'Failed to create notification' });
   }
 });
@@ -32,7 +78,9 @@ app.get('/notifications', async (req, res) => {
   try {
     const notifications = await Notification.find();
     res.json(notifications);
+    
   } catch (error) {
+    console.log("kokoko")
     res.status(500).json({ message: 'Failed to retrieve notifications' });
   }
 });
