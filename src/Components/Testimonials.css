@@ -1,10 +1,43 @@
+/* Add these styles to your CSS file or component */
+
+/* Style the container for the testimonials section */
 .testimonials {
+  text-align: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  height: 10px;
 }
 
+/* Style the heading for the testimonials section */
 .testimonials h2 {
-  color: #333;
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 20px;
+}
+
+/* Style the carousel images */
+.carousel img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Style the carousel navigation arrows */
+.carousel .control-arrow {
+  font-size: 24px;
+  color: #333; /* Change to your desired arrow color */
+  background: transparent;
+}
+
+/* Style the active carousel arrow */
+.carousel .control-arrow:hover {
+  color: #ff5733; /* Change to your desired arrow hover color */
+}
+
+/* Style the carousel dots (if enabled) */
+.carousel .dot {
+  background-color: #333; /* Change to your desired dot color */
+}
+
+/* Style the active carousel dot (if enabled) */
+.carousel .dot.selected {
+  background-color: #ff5733; /* Change to your desired active dot color */
 }

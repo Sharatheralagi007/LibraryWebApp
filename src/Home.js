@@ -42,7 +42,8 @@ function Home() {
       </nav> */}
       <DailyQuote/>
       <main className="flex-container">
-          <NewArrivals /> {/* Include the NewArrivals component */}
+          {/* <NewArrivals /> Include the NewArrivals component */}
+          <Testimonials /> {/* Include the Testimonials component */}
           <Testimonials /> {/* Include the Testimonials component */}
         </main>
       
