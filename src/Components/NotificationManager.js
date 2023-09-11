@@ -3,7 +3,8 @@ import axios from 'axios';
 
 function NotificationManager() {
   const [notifications, setNotifications] = useState([]);
-  const [newNotification, setNewNotification] = useState({ title: '', content: '' });
+  const [newTitle, setNewTitle] = useState("");
+  const [newContent, setNewContent] = useState("");
 
   useEffect(() => {
     // Fetch all notifications when the component mounts
@@ -12,26 +13,47 @@ function NotificationManager() {
 
   const fetchNotifications = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/notifications'); // Replace with your backend server URL
+      const response = await axios.get('http://localhost:5000/notifications'); // Replace with your backend server URL
       setNotifications(response.data);
     } catch (error) {
       console.error('Error fetching notifications:', error);
     }
   };
 
+  // const createNotification = async () => {
+  //   try {
+  //     const data ={ title:newTitle,content: newContent }
+  //     console.log('sda')
+  //     const {data1}=await axios.post('http://localhost:5000/notifications', { body:JSON.stringify(data)},{headers:{"Content-Type":"application/json","Access-Control-Allow-Origin":"http://localhost:5000"}}) // Replace with your backend server URL
+  //     fetchNotifications();
+  //     setNewContent("");
+  //     setNewTitle("");
+  //   } catch (error) {
+  //     console.error('Error creating notification:', error);
+  //   }
+  // };
   const createNotification = async () => {
     try {
-      await axios.post('http://localhost:3000/notifications', newNotification); // Replace with your backend server URL
+      const data = { title: newTitle, content: newContent };
+      console.log('sda');
+      const {response} = await axios.post('http://localhost:5000/notifications', data, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'http://localhost:5000',
+        },
+      });
       fetchNotifications();
-      setNewNotification({ title: '', content: '' });
+      setNewContent('');
+      setNewTitle('');
     } catch (error) {
       console.error('Error creating notification:', error);
     }
   };
+  
 
   const deleteNotification = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/notifications/${id}`); // Replace with your backend server URL
+      await axios.delete(`http://localhost:5000/notifications/${id}`); // Replace with your backend server URL
       fetchNotifications();
     } catch (error) {
       console.error('Error deleting notification:', error);
@@ -48,14 +70,14 @@ function NotificationManager() {
         <input
           type="text"
           placeholder="Title"
-          value={newNotification.title}
-          onChange={(e) => setNewNotification({ ...newNotification, title: e.target.value })}
+          value={newTitle}
+          onChange={(e) => setNewTitle(e.target.value )}
         />
         <input
           type="text"
           placeholder="Content"
-          value={newNotification.content}
-          onChange={(e) => setNewNotification({ ...newNotification, content: e.target.value })}
+          value={newContent}
+          onChange={(e) => setNewContent(e.target.value)}
         />
         <button onClick={createNotification}>Create</button>
       </div>
