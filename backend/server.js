@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors =require('cors')
 const connectDB = require('../public/DB/Dbconnect');
 const Notification = require('../public/DB/Schema');
+const ISBN = require('../public/DB/isbnschema');
 // const Notification = require('../pu');
 
 connectDB()
@@ -134,6 +135,50 @@ app.delete('/notifications/:id', async (req, res) => {
     res.status(500).json({ message: 'Failed to delete notification' });
   }
 });
+app.post('/isbn', async (req, res) => {
+  try {
+    const { isbn } = req.body;
+
+    // Check if ISBN already exists
+    const existingISBN = await ISBN.findOne({ isbn });
+    if (existingISBN) {
+      return res.status(400).json({ message: 'ISBN already exists.' });
+    }
+
+    // Create and save the ISBN to the database
+    const newISBN = new ISBN({ isbn });
+    await newISBN.save();
+
+    res.status(201).json({ message: 'ISBN added successfully.' });
+  } catch (error) {
+    console.error('Error adding ISBN:', error);
+    res.status(500).json({ message: 'Failed to add ISBN.' });
+  }
+});
+// Fetch all ISBN numbers
+app.get('/isbn', async (req, res) => {
+  try {
+    const isbnList = await ISBN.find();
+    res.status(200).json(isbnList);
+  } catch (error) {
+    console.error('Error fetching ISBNs:', error);
+    res.status(500).json({ message: 'Failed to fetch ISBNs.' });
+  }
+});
+app.delete('/isbn/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const deletedISBN = await ISBN.findByIdAndRemove(id);
+    if (!deletedISBN) {
+      return res.status(404).json({ message: 'ISBN not found' });
+    }
+    res.json({ message: 'ISBN deleted' });
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to delete ISBN' });
+  }
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
