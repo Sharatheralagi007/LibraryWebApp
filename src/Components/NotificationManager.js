@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ISBNmanager from './ISBNmanager';
 
 function NotificationManager() {
   const [notifications, setNotifications] = useState([]);
@@ -61,6 +62,7 @@ function NotificationManager() {
   };
 
   return (
+    <>
     <div>
       <h1>Notification Manager</h1>
 
@@ -96,6 +98,8 @@ function NotificationManager() {
         </ul>
       </div>
     </div>
+    <ISBNmanager/>
+      </>
   );
 }
 
