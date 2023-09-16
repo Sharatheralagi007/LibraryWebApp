@@ -20,33 +20,32 @@ function Home() {
         <h1>Welcome to the "Jnana Chetana"</h1>
       </header> */}
       <div class="header-container">
+            <div>
+            <div class="image-background"></div>
+              <div class="overlay">
+                <div className='welcome'>
+                  <h1 className='welcome-text'>Welcome to Jnana Chetana</h1>
+                  <p><DailyQuote/></p>
+                </div>
+              </div>
+            </div>
           <div>
-          <h1 className='welcome-text'>Welcome to Jnana Chetana</h1>
-          <div class="overlay"></div>
-          <div class="image-background"></div>
-          </div>
-          <div>
-
-          </div>
-      </div>
-
-      {/* <nav>
-        <ul>
-          <li><a href="#catalog">Catalog</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href='#employee-table'>Staff</a></li>
-        </ul>
-      </nav> */}
-      <DailyQuote/>
-      <main className="flex-container">
-          {/* <NewArrivals /> Include the NewArrivals component */}
-          <Testimonials /> {/* Include the Testimonials component */}
-          <Testimonials /> {/* Include the Testimonials component */}
-        </main>
-      
+        </div>
+      </div>    
+      <main className="flex-container">       
+      <nav className='navbarlist'>
+              <ul>
+                <li><a href="#about-us">About Us</a></li><br />
+                <li><a href="#resources">Resources</a></li><br />
+                <li><a href="#catalog">Catalog</a></li><br />
+                <li><a href="#events">Events</a></li><br />
+                <li><a href="#services">Services</a></li><br />
+                
+              </ul>
+            </nav>
+          
+          
+          <div className='contentcontainer'>
       <section id="welcome">
         <h2>Welcome to the Library and Information Center</h2>
         <p>
@@ -55,11 +54,19 @@ function Home() {
         <p>
           With over 106,000 volumes, our library collection is regularly updated with new literature, including textbooks, reference books, reports, proceedings, encyclopedias, standards (National & International) Journals, Audio Visual resources, CDs, educational videos, and thesis/reports.
         </p>
-      </section>
+      </section> 
+          <main className="flex-containers">      
+          {/* <NewArrivals /> Include the NewArrivals component */}
+              <div className='testimonials1'><Testimonials/> </div>
+              <div className='testimonials2'><Testimonials/> </div>
+              
+            </main>
+         
       
-      <section id="events">
-        {/* Events content */}
-      </section>
+      
+      {/* <section id="events">
+        Events content
+      </section> */}
       <section id="resources">
       <div>
       <h2>E – Learning Resources</h2>
@@ -102,12 +109,12 @@ function Home() {
       </p>
     </div>
       </section>
-      <section id="services">
-        {/* Services content */}
+    <section id="services">
+        Services content
       </section>
       
 <section id='employee-table'>
-<div>
+  <div>
       <h2>Human Resource</h2>
       <table className="employee-table">
         <thead>
@@ -195,7 +202,8 @@ function Home() {
           Mail to: <a href="mailto:satishtotar@klescet.ac.in">satishtotar@klescet.ac.in</a>
         </p>
       </div>
-</section><div id='rules'>
+</section>
+<div id='rules'>
 <LibraryRules/>
 </div>
 {/* <div className={`notification-box ${isCollapsed ? 'collapsed' : ''}`}>
@@ -220,11 +228,13 @@ function Home() {
           )}
         </div>
       )}
-    </div> */}
+    </div>  */}
+    </div>
+     </main>
     <NotificationComponent/>
     <></>
       <footer>
-        {/* Footer content */}
+        Footer content
       </footer>
     </div>
   )

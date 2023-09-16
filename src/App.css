@@ -1,14 +1,22 @@
 /* src/App.css */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+    scroll-behavior: smooth;
+}
 
 .App {
   text-align: center;
-  padding: 20px;
-  background-color: #f8f8f8;
-  min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+    padding-right: 0px;
+    padding-top: 4px;
+    padding-left: 0px;
 }
 
 .App-header {
@@ -20,12 +28,13 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+ nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+    display: block;
+    background-color: #d6d5d5;
+    padding-right: 92px;
+    padding-top: 47px;
+    padding-left: 70px;
 }
 
 nav a {
@@ -36,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #003366;
+  color: #ffffff;
 }
 
 section {
@@ -141,9 +150,10 @@ footer a:hover {
 }
 
 #welcome h2 {
-  color: #003366;
-  font-size: 28px;
+  color: #bf3337;
+  font-size: 36px;
   margin-bottom: 20px;
+  font-family: minion-pro,serif;
 }
 
 #welcome p {
@@ -284,11 +294,11 @@ footer a:hover {
 }
 
 .image-background {
-  background-image: url('library-with-books.jpg'); /* Replace with your image URL */
+  background-image: url('clgimg.jpg'); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 35vh;
+  height: 85vh;
 }
 
 .overlay {
@@ -297,24 +307,35 @@ footer a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black layer */
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black layer */
 }
 
 .header-container h1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  color: #fff;
-  z-index: 1;
+    top: 55%;
+    left: 53%;
+    transform: translate(-115%, -50%);
+    font-size: 55px;
+    color: #fff;
+    z-index: 1;
 }
 
-
-
-
-
-
+.header-container p{
+  font-size: 25px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 355px;
+    padding-top: 205px;
+    font-family: minion-pro,serif;
+}
+@keyframes slide-up{
+  0%{
+    transform:translateY(100%);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
 
 .welcome-text {
   position: absolute;
@@ -322,12 +343,12 @@ footer a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3em; /* Larger font size */
-  font-family: 'Dancing Script', cursive; /* Custom font family */
+  font-family: minion-pro,serif;
   color: #fff;
   z-index: 1; /* Bring the text above the overlay layer */
-  opacity: 0; /* Start with opacity 0 */
+  opacity: 1; /* Start with opacity 0 */
   /* animation: fadeIn 2s forwards; */
-  animation: slideIn 2s forwards, fadeIn 2s forwards;
+  /* animation: slideIn 2s forwards, fadeIn 2s forwards; */
 }
 
 /* Keyframes for the slide-in animation */
@@ -343,12 +364,17 @@ footer a:hover {
 }
 /* Navbar styles */
 .navbar {
-  background-color: #003366;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  /* background-color: #003366; */
+  position: fixed;
+    top: 0;
+    left: -1px;
+    width: 10007px;
+    background-color: #f5f5f5;
+    color: #fff;
+    padding: 9px  20px;
+    z-index: 1000;
+    display: flex;
+    padding-right: 8px;
 }
 
 .logo a {
@@ -362,7 +388,8 @@ footer a:hover {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
+  padding-left: 249px;
+  padding-right: 28px;
 }
 
 .nav-links li {
@@ -374,10 +401,11 @@ footer a:hover {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #bd2e32;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
+  padding: 10px;
 }
 
 .nav-links a:hover {
@@ -418,8 +446,46 @@ footer a:hover {
 /* Assuming a class name for your logo container */
 /* Assuming a class name for your logo container */
 .logo img {
-  max-width: 1000px; /* Adjust the maximum width as needed */
-  height: auto; /* Allow the image to adjust its height proportionally */
-  vertical-align: middle; /* Center the image vertically within the container */
+  max-width: 1000px;
+  height: 72px;
+  padding-left: 262px;/* Center the image vertically within the container */
+}
+.klelogo{
+  width: 74px;
+  padding-left: 3px;
 }
 
+.navbarlist{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 0px;
+    box-shadow: 0px 2px 5px rgba(250, 214, 214, 0.532);
+    height: 381px;
+    padding-left: 0px;
+    font-family: minion-pro,serif;
+}
+.contentcontainer{
+  flex: 1; /* Allow the scrollable content to fill the remaining space */
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+.flex-containers{
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  width: -16px;
+  /* padding-left: 29px; */
+  height: 560px;
+}
+
+.testimonials2{
+  padding-left: 10px;
+}
+.HugeIcon{
+  font-size: 48px;
+}
