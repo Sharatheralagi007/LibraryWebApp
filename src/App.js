@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import HomeIcon from '@mui/icons-material/Home';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { BrowserRouter as Router, Route,  Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Home from './Home';
 import LibraryFAQ from './Components/LibraryFAQ';
 import Catalog from './Components/Catalog';
+
 import About from './Components/About';
 import NotificationManager from './Components/NotificationManager';
 function App() {
@@ -18,26 +20,31 @@ function App() {
     
 
     <Router>
-    <nav class="navbar">
+    <div class="navbar">
+      <div className='klelogo'>
+        <img src="kleslogo.png" width="74px" />
+      </div>
   <div class="logo">
-    {/* <img src='Logos-01.png'/> */}
+    <img src='clglogo.png'/>
   </div>
+ 
   <ul class="nav-links">
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to="/about">About Us</Link></li>
-    <li class="dropdown">
+    <Link to='/'><HomeIcon className='HugeIcon' /></Link>
+    {/* <li><Link to="/about">About Us</Link></li> */}
+    {/* <li class="dropdown">
       <a href="#">Services</a>
       <div class="dropdown-content">
         <a href="#resources">E-Learning Resources</a>
         <a href="#employee-table">Human Resources</a>
        
       </div>
-    </li>
-    <li><Link to='/catalog'>Catalog</Link></li>
-    <li><Link to='/faq'>Faq</Link></li>
+    </li> */}
+    {/* <li><Link to='/catalog'>Catalog</Link></li> */}
+    {/* <li><Link to='/faq'>Faq</Link></li> */}
 
-    <li><a href="#">Contact</a></li>
-    <li className='dropdown'>
+    <a href="#"><PhoneIcon fontSize="large" />
+</a>
+    {/* <li className='dropdown'>
     <a href="#">Quick Links</a>
     <div class="dropdown-content">
     <a href="#">E-Resources</a>
@@ -46,9 +53,11 @@ function App() {
     <a href="https://www.klescet.ac.in/library-vtu-qp/">Old Question Papers</a>
     <a href="#rules">Library Rules</a>
     </div>
-    </li>
+    </li> */}
   </ul>
-</nav>
+
+  
+</div>
       <Routes>
         
         <Route  exact path="/" Component={Home} />
