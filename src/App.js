@@ -10,6 +10,7 @@ import Catalog from './Components/Catalog';
 
 import About from './Components/About';
 import NotificationManager from './Components/NotificationManager';
+import Resources from './Components/Resources';
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const toggleCollapse = () => {
@@ -22,14 +23,14 @@ function App() {
     <Router>
     <div class="navbar">
       <div className='klelogo'>
-        <img src="kleslogo.png" width="74px" />
+        <img src="kleslogo.png" width="64px" />
       </div>
   <div class="logo">
     <img src='clglogo.png'/>
   </div>
  
   <ul class="nav-links">
-    <Link to='/'><HomeIcon className='HugeIcon' /></Link>
+    <Link to='/'><HomeIcon fontSize="large" /></Link>
     {/* <li><Link to="/about">About Us</Link></li> */}
     {/* <li class="dropdown">
       <a href="#">Services</a>
@@ -40,10 +41,10 @@ function App() {
       </div>
     </li> */}
     {/* <li><Link to='/catalog'>Catalog</Link></li> */}
-    {/* <li><Link to='/faq'>Faq</Link></li> */}
+    <a href="#"><PhoneIcon fontSize="large" /></a>
+    <Link to='/faq'>FAQ</Link>  
 
-    <a href="#"><PhoneIcon fontSize="large" />
-</a>
+
     {/* <li className='dropdown'>
     <a href="#">Quick Links</a>
     <div class="dropdown-content">
@@ -55,7 +56,8 @@ function App() {
     </div>
     </li> */}
   </ul>
-
+  
+  
   
 </div>
       <Routes>
@@ -65,6 +67,7 @@ function App() {
         <Route path='/catalog' Component={Catalog}/>
         <Route path='/about' Component={About}/>
         <Route path='/managenotifications' Component={NotificationManager}/>
+        <Route path='/resources' Component={Resources}/>
       </Routes>
     </Router>
     </>

@@ -36,7 +36,7 @@ function Home() {
       <nav className='navbarlist'>
               <ul>
                 <li><a href="#about-us">About Us</a></li><br />
-                <li><a href="#resources">Resources</a></li><br />
+                <li><a href="/resources">Resources</a></li><br />
                 <li><a href="#catalog">Catalog</a></li><br />
                 <li><a href="#events">Events</a></li><br />
                 <li><a href="#services">Services</a></li><br />
@@ -48,18 +48,33 @@ function Home() {
           <div className='contentcontainer'>
       <section id="welcome">
         <h2>Welcome to the Library and Information Center</h2>
-        <p>
-          Our library is centrally located in the campus, housed in a three-story ultra-modern Library Building named "JNANA CHETANA." We take pride in our excellent collection of books, journals, and non-book materials in Engineering Technology and Management.
+        <p className='space'>
+              Our Library is centrally located in the campus, housed in independent building having a plinth area
+              of 1700 Sq Mts, having total seating capacity of 350 students at a time. The Library has over
+              1,08,000 volumes which are updated regularly by way of adding new literature in the form of
+              text books, reference books, reports, proceedings, encyclopedias, standards (National &amp;
+              International) Journals, Audio Visual resources, CDs, educational videos and thesis/reports.      
         </p>
-        <p>
-          With over 106,000 volumes, our library collection is regularly updated with new literature, including textbooks, reference books, reports, proceedings, encyclopedias, standards (National & International) Journals, Audio Visual resources, CDs, educational videos, and thesis/reports.
+        <p className='space'>
+            Library is automated by using KOHA- Integrated Library management software. It is a
+            open source and multi-user package for effective management of a library from all aspects.
+            Online catalogue of the library and the e-resources can be accessed on the campus network. The
+            library subscribes to nearly 80 Technical Periodicals and More than 9811 International e-journals
+            from IEL, Springer Link, Taylor and Francis, Emerald and ProQuest with 16,800 full text E-
+            Books From the major Publishers. In addition there are 4200 Bound volumes of journals, 3878
+            Compact Discs (CD’s), &amp; 200 IS Standards.
         </p>
-      </section> 
+        <div className='fsize'>Library Atmosphere</div>
+        <p className='space'>When the readers enter the Library they find perfect silence, orderliness and decorum prevailing
+            inside, what is needed most is only their appreciation of these factors and an active co-operation
+            in maintaining the same. This kind of atmosphere is bound to generate joy and urge to read in
+            them and further radiate it to everyone inside the Library.</p>
+                  </section> 
           <main className="flex-containers">      
           {/* <NewArrivals /> Include the NewArrivals component */}
-              <div className='testimonials1'><Testimonials/> </div>
+              {/* <div className='testimonials1'><Testimonials/> </div>
               <div className='testimonials2'><Testimonials/> </div>
-              
+               */}
             </main>
          
       
@@ -67,48 +82,7 @@ function Home() {
       {/* <section id="events">
         Events content
       </section> */}
-      <section id="resources">
-      <div>
-      <h2>E – Learning Resources</h2>
-      <ul>
-        <li><a href="http://172.16.42.174/LocalGuru/index.php">NPTEL</a></li>
-        <li><a href="http://elearning.vtu.ac.in/">VTU e-Learning Resources</a></li>
-      </ul>
-      <p>
-        The Ministry of Human Resource Development, Govt. of India, under its National Mission on Education through Information and Communication Technology (NMEICT), has set-up National Digital Library (NDL) to facilitate search and access the full text e-content materials through a single window.
-      </p>
-      <p>
-        <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">National Digital Library (NDL)</a>
-      </p>
-      <p>
-        The Govt. of Karnataka has initiated more than 85 ICT projects for the use of educational institutes and the various stakeholders. These projects are now available online for the benefit of the student and teaching community. The E-content includes videos, presentations, etc from experts in the domain.
-      </p>
-      <p>
-        <a href="http://164.100.133.129:81/econtent/" target="_blank" rel="noopener noreferrer">E-Content: ICT Initiatives from Govt. of Karnataka</a>
-      </p>
-      <p>
-        The library is a member of the DELNET. The library maintains excellent relations with a number of major Institutions and libraries in India through DELNET, for exchange of books, journals articles for the mutual benefit of the users.
-      </p>
-      <p>
-        <a href="http://Delnet.nic.in" target="_blank" rel="noopener noreferrer">DELNET MEMBERSHIP</a>
-      </p>
-      <p>
-        <a href="http://diete-resources.blogspot.com/2012/03/open-access-journals.html" target="_blank" rel="noopener noreferrer">Open Access Journals</a>
-      </p>
-      <p>
-        <a href="https://indianjournals.com/ijor.aspx?target=open_access_publications_list" target="_blank" rel="noopener noreferrer">open_access_publications_list</a>
-      </p>
-      <p>
-        <a href="http://diete-resources.blogspot.com/2011/10/doaj-directory-of-open-access-journals.html" target="_blank" rel="noopener noreferrer">DOAJ -- Directory of Open Access Journals</a>
-      </p>
-      <p>
-        <a href="https://www.doaj.org/" target="_blank" rel="noopener noreferrer">DOAJ </a>
-      </p>
-      <p>
-        <a href="https://drive.google.com/file/d/1SI_97nB3DVpMprvVg5OLviKqueeRT-I2/view" target="_blank" rel="noopener noreferrer">Open Access Resources in Engineering and Technological Field</a>
-      </p>
-    </div>
-      </section>
+      
     <section id="services">
         Services content
       </section>
