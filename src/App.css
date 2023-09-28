@@ -142,11 +142,12 @@ footer a:hover {
 }
 #welcome {
   background-color: #ffffff;
-  padding: 40px;
+  padding-left: 21px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   text-align: left;
   margin-bottom: 40px;
+  padding-top: 0px;
 }
 
 #welcome h2 {
@@ -157,10 +158,11 @@ footer a:hover {
 }
 
 #welcome p {
-  color: #333;
+  color: #343434;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 
@@ -171,6 +173,7 @@ footer a:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
   margin-bottom: 40px;
+  padding-top: 73px;
 }
 
 #resources h2 {
@@ -182,6 +185,7 @@ footer a:hover {
 #resources p,
 #resources ul {
   color: #333;
+  font-weight: 600;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -364,17 +368,16 @@ footer a:hover {
 }
 /* Navbar styles */
 .navbar {
-  /* background-color: #003366; */
   position: fixed;
-    top: 0;
-    left: -1px;
-    width: 10007px;
-    background-color: #f5f5f5;
-    color: #fff;
-    padding: 9px  20px;
-    z-index: 1000;
-    display: flex;
-    padding-right: 8px;
+  top: 0;
+  height: 77px;
+  width: 10007px;
+  background-color: #f5f5f5;
+  color: #fff;
+  padding: 0px 3px;
+  z-index: 1000;
+  display: flex;
+  padding-right: 8px;
 }
 
 .logo a {
@@ -386,10 +389,12 @@ footer a:hover {
 
 .nav-links {
   list-style: none;
-  display: flex;
-  margin: 0;
-  padding-left: 249px;
-  padding-right: 28px;
+    display: flex;
+    margin: 0;
+    padding-left: 147px;
+    padding-right: 31px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-links li {
@@ -402,10 +407,11 @@ footer a:hover {
 
 .nav-links a {
   color: #bd2e32;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-  padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding-left: 34px;
+    font-size: x-large;
 }
 
 .nav-links a:hover {
@@ -447,7 +453,7 @@ footer a:hover {
 /* Assuming a class name for your logo container */
 .logo img {
   max-width: 1000px;
-  height: 72px;
+  height: 77px;
   padding-left: 262px;/* Center the image vertically within the container */
 }
 .klelogo{
@@ -461,9 +467,12 @@ footer a:hover {
     align-items: center;
     padding:0px 0px;
     box-shadow: 0px 2px 5px rgba(250, 214, 214, 0.532);
-    height: 381px;
+    height: 426px;
     padding-left: 0px;
     font-family: minion-pro,serif;
+    position: sticky;
+    top: 75px;
+
 }
 .contentcontainer{
   flex: 1; /* Allow the scrollable content to fill the remaining space */
@@ -489,3 +498,41 @@ footer a:hover {
 .HugeIcon{
   font-size: 48px;
 }
+.space{
+  text-indent: 70px;
+  color: #343434;
+  
+}
+.fsize{
+  font-size: 27px;
+    color: #bd2e32;
+    font-family: minion-pro,serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.Resources{
+  color: #bf3337;
+    font-size: 44px;
+    margin-bottom: 20px;
+    font-family: minion-pro,serif;
+}
+.reslinks {
+  color: #bf3337;
+  font-weight: 600;
+}
+.reshover :hover{
+  color: yellow;
+}
+/* .remoteimage{
+  
+} */
+
+.fontchange{
+  color: #003366;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* #resoures h3{
+  font-size: 50px;
+} */
