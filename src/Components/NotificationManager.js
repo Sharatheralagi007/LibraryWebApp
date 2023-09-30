@@ -37,7 +37,7 @@ function NotificationManager() {
     try {
       const data = { title: newTitle, content: newContent };
       console.log('sda');
-      const {response} = await axios.post('http://localhost:5000/notifications', data, {
+     await axios.post('http://localhost:5000/notifications', data, {
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': 'http://localhost:5000',

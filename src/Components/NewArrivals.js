@@ -1,99 +1,78 @@
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import React, { useEffect, useState } from 'react';
-const apiKey=encodeURIComponent(process.env.API_KEY);
+
 function NewArrivals() {
-  const [newArrivals, setNewArrivals] = useState([]); // An array of ISBNs
-  const [books, setBooks] = useState([]);
-   
-  const fetchISBNs = async () => {
-    try {
-      const response = await axios.get('http://localhost:5000/isbn'); // Replace with your backend server URL
-      setNewArrivals(response.data);
-    } catch (error) {
-      console.error('Error fetching ISBNs:', error);
-    }
-  };
+  const [isbnList, setIsbnList] = useState([]);
+  const [bookDetails, setBookDetails] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Add loading state
 
-  // Function to fetch book details by ISBN
-  // const fetchBookDetails = (isbn) => {
-  //   axios
-  //     .get('https://cors-anywhere.herokuapp.com/' + `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}&key=${apiKey}`)
-  //     .then((response) => {
-  //       const data = response.data;
-  //       console.log(data)
-  //       if (data.items && data.items.length > 0) {
-  //         const bookInfo = data.items[0].volumeInfo;
-  //         setBooks((prevBooks) => [
-  //           ...prevBooks,
-  //           {
-  //             id: isbn,
-  //             title: bookInfo.title,
-  //             author: bookInfo.authors ? bookInfo.authors[0] : 'Unknown',
-  //             cover: bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : '',
-  //           },
-  //         ]);
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error fetching book data:', error);
-  //     });
-  // };
-  const fetchBookDetails = (isbn) => {
-  axios
-    .get(`https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&format=json&jscmd=data`)
-    .then((response) => {
-      const data = response.data;
-      console.log(data);
-
-      // Check if the response contains data for the ISBN
-      if (`ISBN:${isbn}` in data) {
-        const bookInfo = data[`ISBN:${isbn}`];
-        setBooks((prevBooks) => [
-          ...prevBooks,
-          {
-            id: isbn,
-            title: bookInfo.title,
-            author: bookInfo.authors ? bookInfo.authors[0].name : 'Unknown',
-            cover: bookInfo.cover ? bookInfo.cover.large : '', // You may adjust the cover image size here
-          },
-        ]);
-      }
-    })
-    .catch((error) => {
-      console.error('Error fetching book data:', error);
-    });
-};
-
-  
   useEffect(() => {
-   
-    // Replace this array with your list of ISBNs
-    fetchISBNs();
+    const fetchISBNs = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/isbn');
+        const extractedISBNs = response.data.map((item) => item.isbn);
+        setIsbnList(extractedISBNs);
+        console.log(isbnList);
 
-    // Fetch book details for each ISBN in the list
-    newArrivals.forEach((isbn) => {
-      isbn =encodeURIComponent(isbn)
-      fetchBookDetails(isbn);
-    });
-  }, []);
-console.log(books)
+        
+      } catch (error) {
+        console.error('Error fetching ISBNs:', error);
+      }
+    };
+
+    fetchISBNs();
+  }, []); // Run once when the component mounts
+
+  useEffect(() => {
+    setIsLoading(true); // Set loading state before fetching book details
+
+    const fetchBookDetails = async (isbn) => {
+      try {
+        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}&key=AIzaSyCGOtqj4rax9LanpExmqEXr2Us1safT5MU`);
+        if (response.data.items && response.data.items.length > 0) {
+          const bookData = response.data.items[0].volumeInfo;
+          setBookDetails((prevDetails) => [...prevDetails, bookData]);
+        }
+      } catch (error) {
+        console.error('Error fetching book data:', error);
+      }
+    };
+    if(isbnList.length===0){
+    console.log("isbnNull")
+    }
+    // Check if isbnList is not empty before fetching book details
+    if (isbnList.length > 0) {
+      Promise.all(isbnList.map((isbn) => fetchBookDetails(isbn)))
+        .then(() => setIsLoading(false)) // Set loading state to false when all details are fetched
+        .catch((error) => console.error('Error fetching book details:', error));
+    } else {
+      setIsLoading(false);
+      console.log("Mpt") // If isbnList is empty, set loading state to false
+    }
+  }, [isbnList]); // Run whenever isbnList changes
+
   return (
-    <section className="new-arrivals">
-      <h2>New Arrivals</h2>
-      <Carousel showArrows={true} showStatus={false} showThumbs={false} infiniteLoop={true}>
-        {books.map((book) => (
-          <div key={book.id}>
-            <img src={book.cover} alt={book.title} />
-            <h3>{book.title}</h3>
-            <p>Author: {book.author}</p>
-            <button>Learn More</button>
-          </div>
-        ))}
-      </Carousel>
-    </section>
+    <div>
+      <h1>Book Carousel</h1>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <Carousel>
+          {bookDetails.map((book, index) => (
+            <div key={index}>
+              <img src={book.imageLinks?.smallThumbnail} alt={`Cover for ${book.title}`} />
+              <h2>Title: {book.title}</h2>
+              <p>Author(s): {book.authors ? book.authors.join(', ') : 'N/A'}</p>
+              {/* Add more book information here */}
+            </div>
+          ))}
+        </Carousel>
+      )}
+    </div>
   );
+  
 }
 
 export default NewArrivals;
