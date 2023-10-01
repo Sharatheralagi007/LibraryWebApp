@@ -76,10 +76,12 @@ function Home() {
                   </section> 
             <div className='testimonials'>
           <main className="flex-containers">      
-          {/* <NewArrivals /> Include the NewArrivals component */}
-              <div className='testimonials1'><Testimonials/> </div>
+          
+
+             
+              <div className='testimonials1'><NewArrivals/> </div>
               <div className='testimonials2'><Testimonials/> </div>
-              
+               
             </main>
             </div>
          
