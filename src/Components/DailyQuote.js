@@ -9,7 +9,7 @@ function DailyQuote() {
   function upd(){
     setDailyQuote(quotes[Math.floor(Math.random()*(quotes.length))]);
   }
-  useEffect(() => {
+  useState(() => {
     const interval = setInterval(() => {
       upd();
       

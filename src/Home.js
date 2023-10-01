@@ -10,6 +10,7 @@ import NewArrivals from './Components/NewArrivals';
 import Testimonials from './Components/Testimonials';
 import './Home.css'
 import DailyQuote from './Components/DailyQuote';
+import Collections from './Components/Collection';
 
 
 function Home() {
@@ -35,16 +36,19 @@ function Home() {
       <main className="flex-container">       
       <nav className='navbarlist'>
               <ul>
-                <li><a href="#about-us">About Us</a></li><br />
-                <li><a href="/resources">Resources</a></li><br />
-                <li><a href="#catalog">Catalog</a></li><br />
-                <li><a href="#events">Events</a></li><br />
-                <li><a href="#services">Services</a></li><br />
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/catalog">Catalog</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="/collection">Collections</a></li>
+                <li><a href="#quetionpapers">Question Papers</a></li>
+                <li><a href="#quicklinks">Quick Links</a></li>
+                
                 
               </ul>
             </nav>
           
-          
+          <section></section>
           <div className='contentcontainer'>
       <section id="welcome">
         <h2>Welcome to the Library and Information Center</h2>
@@ -70,18 +74,20 @@ function Home() {
             in maintaining the same. This kind of atmosphere is bound to generate joy and urge to read in
             them and further radiate it to everyone inside the Library.</p>
                   </section> 
+            <div className='testimonials'>
           <main className="flex-containers">      
           {/* <NewArrivals /> Include the NewArrivals component */}
-              {/* <div className='testimonials1'><Testimonials/> </div>
+              <div className='testimonials1'><Testimonials/> </div>
               <div className='testimonials2'><Testimonials/> </div>
-               */}
+              
             </main>
+            </div>
          
+      <div className="collection">
+        <Collections/>
+      </div>
       
-      
-      {/* <section id="events">
-        Events content
-      </section> */}
+     
       
     <section id="services">
         Services content
@@ -164,16 +170,16 @@ function Home() {
         <h3>Contact To- HOD and Librarian</h3>
         <p>
           <strong>Dr. Satish V. Totar</strong>
-          <br />
-          Head - Library and Information Center
-          <br />
-          K.L.E. Dr. M.S. Sheshgiri College of Engineering and Technology
-          <br />
-          Udyambag, Belgaum – 590008
-          <br />
-          Ph – 08312440322 Ext 119
-          <br />
-          Mail to: <a href="mailto:satishtotar@klescet.ac.in">satishtotar@klescet.ac.in</a>
+          
+           Library and Information Center
+          
+           Dr. M.S. Sheshgiri College of Engineering and Technology
+          
+          ag, Belgaum – 590008
+          
+          8312440322 Ext 119
+          
+          o: <a href="mailto:satishtotar@klescet.ac.in">satishtotar@klescet.ac.in</a>
         </p>
       </div>
 </section>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import image1 from '../images/library-with-books.jpg'
-import image2 from '../images/logo192.png'
+// import image2 from '../images/logo192.png'
 function Testimonials() {
   // const [testimonials, setTestimonials] = useState([]);
 
@@ -13,7 +13,7 @@ function Testimonials() {
   //     .then((data) => setTestimonials(data))
   //     .catch((error) => console.error('Error fetching testimonials:', error));
   // }, []);
-  const localImages=[image1,image2]
+  const localImages=[image1]
   // Check if testimonials is empty
   // if (testimonials.length === 0) {
   //   return (

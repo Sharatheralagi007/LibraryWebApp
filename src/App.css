@@ -32,9 +32,10 @@ body {
   list-style: none;
     display: block;
     background-color: #d6d5d5;
-    padding-right: 92px;
-    padding-top: 47px;
-    padding-left: 70px;
+    padding-right: 39px;
+    padding-top: 20px;
+    padding-left: 26px;
+
 }
 
 nav a {
@@ -102,12 +103,14 @@ footer a:hover {
 
 
 #catalog {
-  background-color: #ffffff;
-  padding: 40px;
+  background-color: #
+  ffffff;
+  padding-top: 67px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
   margin-bottom: 40px;
+  padding-left: 47px;
 }
 
 #catalog h2 {
@@ -132,7 +135,7 @@ footer a:hover {
 }
 
 #catalog a {
-  color: #003366;
+  color:  #bd2e32;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -146,7 +149,7 @@ footer a:hover {
   border-radius: 10px;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   text-align: left;
-  margin-bottom: 40px;
+  /* margin-bottom: px; */
   padding-top: 0px;
 }
 
@@ -160,7 +163,7 @@ footer a:hover {
 #welcome p {
   color: #343434;
   font-size: 18px;
-  line-height: 1.6;
+  line-height:  2.1;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -298,7 +301,7 @@ footer a:hover {
 }
 
 .image-background {
-  background-image: url('clgimg.jpg'); /* Replace with your image URL */
+  background-image: url('clgimg.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -465,9 +468,8 @@ footer a:hover {
   display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0px 0px;
-    box-shadow: 0px 2px 5px rgba(250, 214, 214, 0.532);
-    height: 426px;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 53%);
+    height:410px;
     padding-left: 0px;
     font-family: minion-pro,serif;
     position: sticky;
@@ -536,3 +538,5 @@ footer a:hover {
 /* #resoures h3{
   font-size: 50px;
 } */
+
+

@@ -11,6 +11,9 @@ import Catalog from './Components/Catalog';
 import About from './Components/About';
 import NotificationManager from './Components/NotificationManager';
 import Resources from './Components/Resources';
+import { Collection } from 'mongoose';
+
+
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const toggleCollapse = () => {
@@ -47,7 +50,7 @@ function App() {
 
     {/* <li className='dropdown'>
     <a href="#">Quick Links</a>
-    <div class="dropdown-content">
+    <div class="dropdown-content">c
     <a href="#">E-Resources</a>
     <a href="http://www.nptelvideos.in/">Online Catalogue(EPAC)</a>
     <a href="http://www.nptelvideos.in/">NPTEL(E-Learning)</a>
@@ -68,6 +71,7 @@ function App() {
         <Route path='/about' Component={About}/>
         <Route path='/managenotifications' Component={NotificationManager}/>
         <Route path='/resources' Component={Resources}/>
+        <Route path='/collection' Component={Collection}/>
       </Routes>
     </Router>
     </>
