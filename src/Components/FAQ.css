@@ -7,8 +7,9 @@
   }
   
   h2 {
-    font-size: 24px;
+    font-size: 31px;
     color: #333;
+    
   }
   
   ol {
@@ -18,7 +19,7 @@
   
    nav li {
     margin-bottom: 15px;
-    border-bottom: 2px solid #9e3737;
+    border-bottom: 1px solid #9e3737;
     padding-bottom: 19px;
     font-size: 19px;
     
