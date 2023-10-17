@@ -32,11 +32,13 @@ body {
   list-style: none;
     display: block;
     background-color: #d6d5d5;
-    padding-right: 39px;
+   
     padding-top: 20px;
-    padding-left: 26px;
-
+    padding-left: 60px;
+    padding-right: 71px;
 }
+
+
 
 nav a {
   text-decoration: none;
@@ -150,7 +152,7 @@ footer a:hover {
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   text-align: left;
   /* margin-bottom: px; */
-  padding-top: 0px;
+  padding-top: 19px;
 }
 
 #welcome h2 {
@@ -171,12 +173,12 @@ footer a:hover {
 
 #resources {
   background-color: #ffffff;
-  padding: 40px;
+  
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
   margin-bottom: 40px;
-  padding-top: 73px;
+  padding-left: 26px;
 }
 
 #resources h2 {
@@ -301,11 +303,11 @@ footer a:hover {
 }
 
 .image-background {
-  background-image: url('clgimg.jpg');
+  /* background-image: url('clgimg.jpg'); */
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 85vh;
+  height: 540px;
 }
 
 .overlay {
@@ -313,7 +315,7 @@ footer a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height:100%;
   background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black layer */
 }
 
@@ -332,7 +334,7 @@ footer a:hover {
     color: white;
     padding-left: 10px;
     padding-right: 355px;
-    padding-top: 205px;
+    padding-top: 167px;
     font-family: minion-pro,serif;
 }
 @keyframes slide-up{
@@ -373,8 +375,8 @@ footer a:hover {
 .navbar {
   position: fixed;
   top: 0;
-  height: 77px;
-  width: 10007px;
+  height: 81px;
+  width: 1520px;
   background-color: #f5f5f5;
   color: #fff;
   padding: 0px 3px;
@@ -469,11 +471,11 @@ footer a:hover {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgb(0 0 0 / 53%);
-    height:410px;
-    padding-left: 0px;
+    height: 385px;
+    padding-top: 30px;
     font-family: minion-pro,serif;
     position: sticky;
-    top: 75px;
+    top: 100px;
 
 }
 .contentcontainer{
@@ -540,3 +542,7 @@ footer a:hover {
 } */
 
 
+.testimonials1{
+  width: 401px;
+  padding-left: 372px;
+}

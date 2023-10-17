@@ -1,0 +1,28 @@
+.Resources{
+    color: #bf3337;
+      font-size: 44px;
+      margin-bottom: 20px;
+      font-family: minion-pro,serif;
+  }
+  .reslinks li:hover{
+    color: yellow;
+  }
+.resourcenavbarlist{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 53%);
+    height:375px;
+    padding-left: 0px;
+    font-family: minion-pro,serif;
+    position: sticky;
+    top: 143px;
+
+}
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  width: -16px;
+}

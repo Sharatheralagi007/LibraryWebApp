@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+
 function NewArrivals() {
   const [isbnList, setIsbnList] = useState([]);
   const [bookDetails, setBookDetails] = useState([]);
@@ -55,7 +56,7 @@ function NewArrivals() {
 
   return (
     <div>
-      <h1>Book Carousel</h1>
+      <h1>New Arrivals</h1>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
