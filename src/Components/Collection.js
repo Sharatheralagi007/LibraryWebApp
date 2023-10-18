@@ -3,6 +3,8 @@ import './collection.css';
 
 const Collections = () => {
   return (
+    <>
+      <h2>Collections</h2>
     <div className="grid-container">
       <div className="grid-item">
         <h3>67502</h3>
@@ -36,6 +38,7 @@ const Collections = () => {
       <p>CD-ROM's</p>
       </div>
     </div>
+    </>
   );
 };
 

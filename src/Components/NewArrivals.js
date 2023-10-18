@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './NewArrivals.css'
-import CoverFlow from 'coverflow-react';
+
+
 function NewArrivals() {
   const [isbnList, setIsbnList] = useState([]);
   const [bookDetails, setBookDetails] = useState([]);
@@ -65,7 +65,6 @@ function NewArrivals() {
   return (
     <div>
       <h1>New Arrivals</h1>
-      <br/>
       {isLoading ? (
         <p>Loading...</p>
       ) : (

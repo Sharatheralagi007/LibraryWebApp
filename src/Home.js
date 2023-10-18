@@ -11,9 +11,13 @@ import Testimonials from './Components/Testimonials';
 import './Home.css'
 import DailyQuote from './Components/DailyQuote';
 import Collections from './Components/Collection';
+import { Link } from 'react-router-dom';
+import './Components/Resources.css';
+import ImageSlider from './Components/ImageSlider';
 
 
 function Home() {
+  
   return (
     <div className="App">
       {/* <header className="header-container">
@@ -22,7 +26,7 @@ function Home() {
       </header> */}
       <div class="header-container">
             <div>
-            <div class="image-background"></div>
+            <div className='image-background'> <ImageSlider/></div>
               <div class="overlay">
                 <div className='welcome'>
                   <h1 className='welcome-text'>Welcome to Jnana Chetana</h1>
@@ -36,11 +40,10 @@ function Home() {
       <main className="flex-container">       
       <nav className='navbarlist'>
               <ul>
-                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#welcome">About Us</a></li>
                 <li><a href="/resources">Resources</a></li>
                 <li><a href="/catalog">Catalog</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="/collection">Collections</a></li>
+                <li><a href="#collection">Collections</a></li>
                 <li><a href="#quetionpapers">Question Papers</a></li>
                 <li><a href="#quicklinks">Quick Links</a></li>
                 
@@ -75,17 +78,11 @@ function Home() {
             them and further radiate it to everyone inside the Library.</p>
                   </section> 
             <div className='testimonials'>
-          <main className="flex-containers">      
-          
-
-             
-              <div className='testimonials1'><NewArrivals/> </div>
               {/* <div className='testimonials2'><Testimonials/> </div> */}
-               
-            </main>
+              {/* <div className='testimonials1'><NewArrivals/> </div> */}
             </div>
          
-      <div className="collection">
+      <div  id='collection' className="collection">
         <Collections/>
       </div>
       

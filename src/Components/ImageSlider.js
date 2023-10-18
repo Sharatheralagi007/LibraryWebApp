@@ -1,59 +1,36 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import Carousel from 'react-bootstrap/Carousel';
+// import ExampleCarouselImage from 'components/images';
 
-const Slide = ({ item }) => {
-  const styles = {
-    backgroundImage: `url(${item.img})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-  };
- 
-};
-
-const Slider = ({ slides }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [translateValue, setTranslateValue] = useState(0);
-  const handlseDotClick = (index) => {
-    setCurrentIndex(index);
-    if (index === 0) {
-      setTranslateValue(0);
-    } else {
-      let t = index * 100;
-      setTranslateValue(-t);
-    }
-  };
-
-  useEffect(() => {
-    let slider = setInterval(() => {
-      if (currentIndex < slides.length - 1) {
-        setCurrentIndex(currentIndex + 1);
-        setTranslateValue(-(currentIndex + 1) * 100);
-      } else {
-        setCurrentIndex(0);
-        setTranslateValue(0);
-      }
-    }, 5000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [currentIndex]);
+function ImageSlider() {
   return (
-    <div className="slider">
-      <div
-        className="slider_wrapper"
-        style={{
-          transform: `translateX(${translateValue}%)`,
-          transition: "transform ease-out 0.4s",
-        }}
-      >
-        {slides.map((item) => {
-          return <Slide key={item.id} item={item} />;
-        })}
-      </div>
+    <div className="imgslider">
+       <Carousel>
+        <Carousel.Item interval={3000}>
+          <img src="kleclg.jpg"  height={540} alt="" />
       
+      </Carousel.Item>
+
+   
+      <Carousel.Item interval={3000}>
+        <img src="clgimg.jpg"  height={540} alt="" />
+      
+      </Carousel.Item>
+
+      <Carousel.Item interval={3000}>
+        <img src="libimg1.jpg" height={540} alt="" />
+      </Carousel.Item>
+      
+        <Carousel.Item interval={3000}>
+         <img src="libimg2.jpg" height={540} alt="" />
+      </Carousel.Item>
+      
+      <Carousel.Item>
+         <img src="library-with-books.jpg" height={540} alt="" />
+
+      </Carousel.Item>
+    </Carousel>
     </div>
   );
-};
+}
 
-export default Slider;
+export default ImageSlider;
