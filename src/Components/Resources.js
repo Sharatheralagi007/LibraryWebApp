@@ -1,7 +1,20 @@
 import React from 'react'
-
+import "../App.css"
+import '../Home.css'
 const Resources = () => {
   return (
+    <div className="flex-container">
+      <nav className='resourcenavbarlist'>
+          <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/catalog">Catalog</a></li>
+          <li><a href="#quetionpapers">Question Papers</a></li>
+          <li><a href="#quicklinks">Quick Links</a></li>
+          
+          
+        </ul>
+      </nav>
     <div><section id="resources">
     <div>
         <h1 className='Resources'><u>Resources</u></h1>
@@ -65,6 +78,7 @@ const Resources = () => {
     <img src="RemoteAccess.jpg" height="1000px"  />
     
     </section></div>
+    </div>
   )
 }
 

@@ -15,3 +15,13 @@
   width: 50%;
   /* Add additional styles as needed */
 }
+
+.swiper-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}

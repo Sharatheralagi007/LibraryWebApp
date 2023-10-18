@@ -12,6 +12,7 @@ import About from './Components/About';
 import NotificationManager from './Components/NotificationManager';
 import Resources from './Components/Resources';
 import { Collection } from 'mongoose';
+import Collections from './Components/Collection';
 
 
 function App() {
@@ -19,6 +20,13 @@ function App() {
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
+  const slides = [
+    { url: "http://localhost:3000/image-1.jpg", title: "beach" },
+    { url: "http://localhost:3000/image-2.jpg", title: "boat" },
+    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+    { url: "http://localhost:3000/image-4.jpg", title: "city" },
+    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  ];
   return (
     <>
     
@@ -71,7 +79,7 @@ function App() {
         <Route path='/about' Component={About}/>
         <Route path='/managenotifications' Component={NotificationManager}/>
         <Route path='/resources' Component={Resources}/>
-        <Route path='/collection' Component={Collection}/>
+        
       </Routes>
     </Router>
     </>

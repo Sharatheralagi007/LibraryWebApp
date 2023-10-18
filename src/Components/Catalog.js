@@ -2,6 +2,19 @@ import React from 'react'
 
 const Catalog = () => {
   return (
+    <div className="flex-containers">
+      <nav className='resourcenavbarlist'>
+          <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/catalog">Catalog</a></li>                  
+          <li><a href="#quetionpapers">Question Papers</a></li>
+          <li><a href="#quicklinks">Quick Links</a></li>
+          
+          
+        </ul>
+      </nav>
+      <div>
     <section id="catalog">
         <h2>Library Online Catalogue</h2>
         <p>
@@ -17,6 +30,8 @@ const Catalog = () => {
           </ul>
         </p>
       </section>
+      </div>
+      </div>
   )
 }
 
