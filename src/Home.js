@@ -80,7 +80,7 @@ function Home() {
 
              
               <div className='testimonials1'><NewArrivals/> </div>
-              <div className='testimonials2'><Testimonials/> </div>
+              {/* <div className='testimonials2'><Testimonials/> </div> */}
                
             </main>
             </div>
