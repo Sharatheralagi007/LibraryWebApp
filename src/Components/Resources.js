@@ -1,6 +1,7 @@
 import React from 'react'
 import "../App.css"
-import '../Home.css'
+// import '../Home.css'
+
 const Resources = () => {
   return (
     <div className="flex-container">
@@ -9,9 +10,10 @@ const Resources = () => {
           <li><a href="/">Home</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/catalog">Catalog</a></li>
-          <li><a href="#quetionpapers">Question Papers</a></li>
-          <li><a href="#quicklinks">Quick Links</a></li>
-          
+                {/* <li><a href="#collection">Collections</a></li> */}
+                <li><a href="#quetionpapers">Question Papers</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+               
           
         </ul>
       </nav>
@@ -74,10 +76,104 @@ const Resources = () => {
     <p className='reshover'>
       <a href="http://klesmsscet.new.knimbus.com" target="_blank" rel="noopener noreferrer"><div className='reslinks'>http://klesmsscet.new.knimbus.com</div></a>
     </p>
-  
-    <img src="RemoteAccess.jpg" height="1000px"  />
+  <div className='img'>
+  <img src="RemoteAccess.jpg"   />
+
+  </div>
     
-    </section></div>
+    
+    </section>
+    <section id='employee-table'>
+  <div>
+      <h2>Human Resource</h2>
+      <table className="employee-table">
+        <thead>
+          <tr>
+            <th>SL</th>
+            <th>Name of Employee</th>
+            <th>Designation</th>
+            <th>Qualification</th>
+            <th>Experience in Yrs</th>
+            <th>Phone No</th>
+            <th>E-mail IDs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr. Satish V. Totar</td>
+            <td>Librarian &amp; HOD</td>
+            <td>M.L.I.Sc., M.phil, PGDLAN, KSET Ph.D</td>
+            <td>13.5</td>
+            <td>9972500355</td>
+            <td>satishtotar@klescet.ac,in</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Shri. R. B. Chinnannavar</td>
+            <td>Asst. Librarian</td>
+            <td>M.L.I.Sc.</td>
+            <td>34</td>
+            <td>9448691451</td>
+            <td>ravibc67@yahoo.co.in</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Shri. S.K. Chougala</td>
+            <td>Asst. Librarian</td>
+            <td>M.L.I.Sc.</td>
+            <td>18</td>
+            <td>8277797978</td>
+            <td>chougalasatish@gmail.com</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Shri. S. R. Gadag</td>
+            <td>Lib.Asst.</td>
+            <td>M.L.I.Sc.</td>
+            <td>14</td>
+            <td>9632459987</td>
+            <td>srgadag71@gmail.com</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Shri. Anigolmath</td>
+            <td>Attender</td>
+            <td>C.L.I.Sc</td>
+            <td>8.5</td>
+            <td>7349609102</td>
+            <td>Bassumath9@gmail.com</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Shri. B.M. Hiremath</td>
+            <td>Attender</td>
+            <td>PUC</td>
+            <td>8</td>
+            <td>8277448399</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div className="contact-details">
+        <h3>Contact To- HOD and Librarian</h3>
+        <p>
+          <strong>Dr. Satish V. Totar</strong>
+          
+           Library and Information Center
+          
+           Dr. M.S. Sheshgiri College of Engineering and Technology
+          
+          ag, Belgaum – 590008
+          
+          8312440322 Ext 119
+          
+          o: <a href="mailto:satishtotar@klescet.ac.in">satishtotar@klescet.ac.in</a>
+        </p>
+      </div>
+</section>
+    </div>
     </div>
   )
 }

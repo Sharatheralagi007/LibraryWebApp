@@ -1,14 +1,17 @@
 /* FAQ.css */
 
 .content {
-  max-width: 800px;
   margin: 0 auto;
-  padding: 97px;
-  }
+  /* padding-top: 5rem; */
+  width: 78rem;
+  padding-top: 2rem;
+}
+  
   
   h2 {
     font-size: 31px;
     color: #333;
+    padding-top: 3rem;
     
   }
   
@@ -18,10 +21,11 @@
   }
   
    nav li {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     border-bottom: 1px solid #9e3737;
     padding-bottom: 19px;
-    font-size: 19px;
+    font-size: 30px;
+    font-size: 30px;
     
 }
   
@@ -35,4 +39,9 @@
     margin: 0;
     color: #666;
   }
-  
+  @media screen and (max-width: 415px){
+    .content {
+      width: 23rem;
+      padding-top: 18rem;
+    }
+  }

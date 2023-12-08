@@ -1,0 +1,166 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  /* padding: 20px 0; */
+}
+
+.container {
+  display: table-cell;
+  justify-content: space-between;
+}
+
+.footer-logo img {
+    width: 28rem;
+    height: 5rem;
+}
+
+.contact-info {
+  display: flex;
+}
+
+.hod-info,
+.librarian-info {
+  padding: 2px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 19px;
+}
+h5{
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+.para p{
+  color:#dfdfe1 ;
+}
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #dfdfe1;
+}
+
+li{
+  color: #000000;
+}
+a {
+  color: #dfdfe1;
+  /* border-bottom: 1px solid red; */
+  font-size: 16px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 152px;
+  background-color: #fffefe;
+  margin: 64px 14px;
+}
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  flex: 1; /* Take available space */
+  text-align: left;
+  flex-basis: 30%; /* Adjust the width as needed */
+}
+
+.hod-info {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quick-links {
+  flex: 1; /* Take available space */
+  text-align: center;
+  flex-basis: 40%;
+ 
+}
+.links{
+  border-bottom: 1px solid red;
+}
+
+.quick-links h4 {
+  margin-bottom: 10px;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links ul li {
+  margin: 10px 0;
+}
+
+.applogo {
+  flex: 1; /* Take available space */
+  text-align: right;
+  flex-basis: 30%;
+  padding-right: 7rem; /* Adjust the width as needed */
+}
+
+.applogo img {
+  width: 116px;
+    height: 6rem;
+    border-radius: 14px
+}
+
+@media screen and (max-width:415px) {
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 25rem;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info,
+  .quick-links,
+  .applogo {
+    width: 100%;
+    text-align: center;
+    padding-left: 1rem;
+  }
+  
+  .hod-info,
+  .para {
+    text-align: left;
+  }
+  
+  .vertical-line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 10px 0;
+  }
+  
+  h3,
+  h5 {
+    color: #bf2d2d;
+  }
+  .applogo{
+    
+    padding-left: 7rem;
+  }
+  .applogo h5{
+    padding-left: 1rem;
+}
+}

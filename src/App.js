@@ -7,12 +7,11 @@ import { Link } from 'react-router-dom';
 import Home from './Home';
 import LibraryFAQ from './Components/LibraryFAQ';
 import Catalog from './Components/Catalog';
-
+import Galleryimages from './Components/Galleryimages';
 import About from './Components/About';
 import NotificationManager from './Components/NotificationManager';
 import Resources from './Components/Resources';
 import { Collection } from 'mongoose';
-import Collections from './Components/Collection';
 
 
 function App() {
@@ -20,19 +19,33 @@ function App() {
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
-  const slides = [
-    { url: "http://localhost:3000/image-1.jpg", title: "beach" },
-    { url: "http://localhost:3000/image-2.jpg", title: "boat" },
-    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
-    { url: "http://localhost:3000/image-4.jpg", title: "city" },
-    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
-  ];
   return (
     <>
     
 
     <Router>
-    <div class="navbar">
+    <div className="navbar">
+      <label>
+      <input type="checkbox" />
+      <div className="toggle">
+        <span className='top_line common'></span>
+        <span className='midle_line common'></span>
+        <span className='bottom_line common'></span>
+      </div>
+
+      <div className="hamnavbar">
+        <ul className='hamlist'>
+                <li className='list'><a href="/">Home</a></li>
+                <li className='list'><a href="/resources">Resources</a></li>
+                <li className='list'><a href="/catalog">Catalog</a></li>
+                <li className='list'><a href="#collection">Collections</a></li>
+                <li className='list'><a href="#quetionpapers">Question Papers</a></li>
+                <li className='list'><a href="#footer">Quick Links</a></li>
+                <li className='list'><a href="/gallery">Gallery</a></li>
+      </ul>
+      </div>
+      </label>
+
       <div className='klelogo'>
         <img src="kleslogo.png" width="64px" />
       </div>
@@ -79,7 +92,9 @@ function App() {
         <Route path='/about' Component={About}/>
         <Route path='/managenotifications' Component={NotificationManager}/>
         <Route path='/resources' Component={Resources}/>
-        
+        <Route path='/collection' Component={Collection}/>
+        <Route path='/gallery' Component={Galleryimages}/>
+
       </Routes>
     </Router>
     </>

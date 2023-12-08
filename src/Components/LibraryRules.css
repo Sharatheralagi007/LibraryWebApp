@@ -1,21 +1,22 @@
 .content {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
+  background-color: #f9f9f9;
+  padding: 20px;
+  /* border-radius: 10px; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  text-align: left;
+}
   
   .content h2 {
     color: #003366;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
   }
   
   .content h3 {
     color: #555;
-    font-size: 24px;
-    margin-top: 20px;
+    font-size: 2rem;
+    margin-top: 1rem;
   }
   
   .content ul {
@@ -25,16 +26,16 @@
   
   .content li {
     color: #333;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
   
   .content p {
     color: #555;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
   
   .content a {

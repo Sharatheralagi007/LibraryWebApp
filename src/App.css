@@ -17,6 +17,8 @@ body {
     padding-right: 0px;
     padding-top: 4px;
     padding-left: 0px;
+    width: 95rem;
+
 }
 
 .App-header {
@@ -66,7 +68,7 @@ footer {
 }
 
 footer a {
-  color: #ffffff;
+  color: #dfdfe1;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -105,14 +107,13 @@ footer a:hover {
 
 
 #catalog {
-  background-color: #
-  ffffff;
-  padding-top: 67px;
+  background-color: #ffffff;
+  padding-top: 0px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   text-align: left;
-  margin-bottom: 40px;
-  padding-left: 47px;
+  margin-bottom: 30px;
+  padding-left: 9px;
 }
 
 #catalog h2 {
@@ -130,10 +131,11 @@ footer a:hover {
 
 #catalog ul {
   color: #333;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  padding-left: 20px;
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-left: 1px;
+    text-decoration: none;
 }
 
 #catalog a {
@@ -149,22 +151,23 @@ footer a:hover {
   background-color: #ffffff;
   padding-left: 21px;
   border-radius: 10px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   text-align: left;
-  /* margin-bottom: px; */
   padding-top: 19px;
+  width: 78rem;
 }
 
 #welcome h2 {
   color: #bf3337;
-  font-size: 36px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   font-family: minion-pro,serif;
+  font-weight: 700;
 }
+
 
 #welcome p {
   color: #343434;
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height:  2.1;
   margin-bottom: 20px;
   font-weight: 600;
@@ -208,9 +211,9 @@ footer a:hover {
 
 
 .employee-table {
-  width: 100%;
+  width: 90rem;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 .employee-table th,
@@ -235,13 +238,13 @@ footer a:hover {
 
 .contact-details h3 {
   color: #003366;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .contact-details p {
   color: #333;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -261,16 +264,15 @@ footer a:hover {
 
 .notification-box {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
+  bottom: 62px;
+  right: 0px;
+  width: 250px;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 14px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: width 0.3s;
-}
+  transition: width 0.3s;}
 
 .notification-box.collapsed {
   width: 60px;
@@ -303,11 +305,10 @@ footer a:hover {
 }
 
 .image-background {
-  /* background-image: url('clgimg.jpg'); */
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 540px;
+  height: 37.5rem;
 }
 
 .overlay {
@@ -316,7 +317,7 @@ footer a:hover {
   left: 0;
   width: 100%;
   height:100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black layer */
+  background-color:rgb(14 12 12 / 36%);
 }
 
 .header-container h1 {
@@ -324,18 +325,18 @@ footer a:hover {
     top: 55%;
     left: 53%;
     transform: translate(-115%, -50%);
-    font-size: 55px;
+    font-size: 3rem;
     color: #fff;
     z-index: 1;
 }
 
 .header-container p{
-  font-size: 25px;
-    color: white;
-    padding-left: 10px;
-    padding-right: 355px;
-    padding-top: 167px;
-    font-family: minion-pro,serif;
+  font-size: 1.5rem;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 13rem;
+  padding-top: 11rem;
+  font-family: minion-pro,serif;
 }
 @keyframes slide-up{
   0%{
@@ -351,37 +352,37 @@ footer a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3em; /* Larger font size */
+  font-size: 3em; 
   font-family: minion-pro,serif;
   color: #fff;
-  z-index: 1; /* Bring the text above the overlay layer */
-  opacity: 1; /* Start with opacity 0 */
-  /* animation: fadeIn 2s forwards; */
-  /* animation: slideIn 2s forwards, fadeIn 2s forwards; */
+  z-index: 1; 
+  opacity: 1; 
+  
+  
 }
 
-/* Keyframes for the slide-in animation */
+
 @keyframes slideIn {
   0% { left: -100%; }
   100% { left: 50%; }
 }
 
-/* Keyframes for the fade-in animation */
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-/* Navbar styles */
+
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
-  height: 81px;
-  width: 1520px;
+  height: 5rem;
+  width: 95rem;
   background-color: #f5f5f5;
   color: #fff;
   padding: 0px 3px;
   z-index: 1000;
-  display: flex;
+  display: none;
   padding-right: 8px;
 }
 
@@ -394,12 +395,12 @@ footer a:hover {
 
 .nav-links {
   list-style: none;
-    display: flex;
-    margin: 0;
-    padding-left: 147px;
-    padding-right: 31px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin: 0;
+  padding-left: 8rem;
+  padding-right: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links li {
@@ -423,7 +424,6 @@ footer a:hover {
   color: #ffd700;
 }
 
-/* Dropdown menu styles */
 .dropdown {
   position: relative;
   cursor: pointer;
@@ -454,12 +454,11 @@ footer a:hover {
 .dropdown-content a:hover {
   background-color: #f4f4f4;
 }
-/* Assuming a class name for your logo container */
-/* Assuming a class name for your logo container */
+
 .logo img {
-  max-width: 1000px;
-  height: 77px;
-  padding-left: 262px;/* Center the image vertically within the container */
+  width: 63rem;
+    height: 4rem;
+    padding-left: 17rem;
 }
 .klelogo{
   width: 74px;
@@ -471,11 +470,13 @@ footer a:hover {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgb(0 0 0 / 53%);
-    height: 385px;
+    height: 461px;
     padding-top: 30px;
     font-family: minion-pro,serif;
     position: sticky;
-    top: 100px;
+    top: 0px;
+
+    
 
 }
 .contentcontainer{
@@ -489,15 +490,13 @@ footer a:hover {
 .flex-containers{
   display: flex;
   justify-content: space-between;
-  display: flex;
-  justify-content: space-between;
   width: -16px;
-  /* padding-left: 29px; */
+  padding-left: 0px;
   height: 560px;
 }
 
-.testimonials2{
-  padding-left: 10px;
+.testimonials{
+  padding-top: 2rem;
 }
 .HugeIcon{
   font-size: 48px;
@@ -508,11 +507,10 @@ footer a:hover {
   
 }
 .fsize{
-  font-size: 27px;
-    color: #bd2e32;
-    font-family: minion-pro,serif;
-    font-weight: bold;
-    padding-bottom: 10px;
+  font-size: 34px;
+  color: #bd2e32;
+  font-family: minion-pro,serif;
+  font-weight: 700;
 }
 .Resources{
   color: #bf3337;
@@ -527,9 +525,6 @@ footer a:hover {
 .reshover :hover{
   color: yellow;
 }
-/* .remoteimage{
-  
-} */
 
 .fontchange{
   color: #003366;
@@ -537,12 +532,506 @@ footer a:hover {
   margin-bottom: 20px;
 }
 
-/* #resoures h3{
-  font-size: 50px;
+@media screen and (max-width: 750px) {
+  .header-container h1{
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .navbar{
+    width: 80rem;
+  }
+  #catalog {
+    padding-left: 26px;
+}
+  
+  .nav ul{
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 71px;
+    background-color: none;
+  }
+ .navbarlist{
+  display: none;
+ }
+  .navbarlist ul {
+    
+    list-style: none;
+  } 
+  .klelogo{
+    display: none;
+  }
+.logo img {
+
+  width: 61rem;
+  padding-left: 3rem;
+  padding-left: 0rem;
+  padding-right: 14rem;
+  height: 4rem;
+  padding-bottom: 1rem;
+}
+.App {
+  width: 100%;
+  height: auto;
+}
+.nav-links{
+  display: none;
+}
+.image-background{
+  width: 100%;
+}
+.resourcenavbarlist{
+  display: none;
+}
+.testimonials{
+  width: 68rem;
+  display: flex;
+}
+.container-md, .container-sm, .container {
+width: 68rem;
+}
+.testimonials {
+  padding-top: 2rem;
+    height: 48rem;
+}
+.home-testimonial-bottom {
+  margin-top: 6px;
+  top: 10rem;
+}
+
+.home-testimonial {
+  height: 59rem;
+}
+#employee-table{
+  width: 98rem;
+}
+
+input{
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+}
+
+.toggle{
+position: absolute;
+height: 30px;
+width: 30px;
+top: 25px;
+left: 35px;
+z-index: 1;
+cursor: pointer;
+border-radius: 2px;
+background-color: #fff;
+box-shadow: 0 0 10px rgb(0, 0, 0.3);
+}
+
+.toggle .common{
+position: absolute;
+height: 2px;
+width: 20px;
+background-color: #8000ff;
+border-radius: 50px;
+transition: 0.3s ease;
+}
+
+.toggle .top_line{
+top: 30%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.toggle .midle_line{
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.toggle .bottom_line{
+top: 70%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+input:checked ~ .toggle .top_line{
+left: 2px;
+top: 14px;
+width: 25px;
+transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .bottom_line{
+left: 2px;
+top: 14px;
+width: 25px;
+transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .midle_line{
+opacity: 0;
+transform: translateX(20px);
+}
+
+
+input:checked ~ .hamnavbar{
+transform: translateX(0);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5s);
+}
+.hamnavbar{
+  width:2rem;
+  background-color: #d6d5d5;
+
+}
+nav ul{
+  padding-left: 4rem;
+  padding-right: 9rem;
+}
+nav li{
+  border-bottom: 1px solid #bd2e32;
+}
+input:checked ~ .slide{
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5s);
+}
+.hamnavbar ul a{
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.5rem;
+  
+}
+.hamnavabar ul{
+  background-color: white;
+    width: 8rem;
+    list-style: none;
+
+}
+.hamlist{
+  background-color: #f5f5f5;
+   width: 15rem;
+   list-style: none;
+}
+.list{
+  padding-bottom: 2rem;
+}
+}
+
+.hamnavbar{
+  /* display: none; */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 53%);
+    height: 8px;
+    padding-top: 77px;
+    font-family: minion-pro,serif;
+    position: sticky;
+    top: 100px;
+    width:0rem;
+    transform: translateX(-16.6rem);
+}
+input{
+  display: none;
+}
+
+
+
+#employee-table{
+  padding-left: 2rem;
+}
+
+
+body {
+  display: grid;
+  place-items: center;
+  position: relative;
+  /* height: 100vh; */
+  background-color: #9a99f2;
+
+}
+
+.home-testimonial{
+  background-color: #f5f5f5;
+  height: 25rem;
+  width: 68rem;
+}
+
+.home-testimonial-bottom{
+  background-color: #f5f5f5;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: 112px;
+  margin-bottom: 0px;
+  position: relative;
+  height: 6rem;
+  top: 5rem;
+}
+
+.home-testimonial h3{
+  color: var(--orange);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase
+}
+
+.home-testimonial h2{
+  color: white;
+  font-size: 28px;
+  font-weight: 700
+}
+
+.testimonial-inner{position: relative;
+  top: -174px
+}
+
+.testimonial-pos{position: relative;
+  top: 24px
+}
+
+.testimonial-inner .tour-desc{
+  border-radius: 5px;
+  padding: 40px
+}
+
+.color-grey-3{
+  font-family: "Montserrat",
+   Sans-serif;
+   font-size: 14px;
+   color: #6c83a2
+  }
+
+  .testimonial-inner img.tm-people{
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: none
+  }
+
+  .link-name{
+    font-family: "Montserrat",
+    Sans-serif;
+    font-size: 14px;
+    color: #6c83a2
+  }
+  
+  .link-position{
+    font-family: "Montserrat", 
+    Sans-serif;
+    font-size: 12px;
+    color: #6c83a2
+  }
+  
+ .footer-logo{
+  
+  padding-left: 4rem;
+ }
+
+ .contact-info{
+  padding-left: 3rem;
+ }
+  
+ @media screen and (max-width: 415px) {
+  .header-container h1{
+    font-size: 19px;
+    line-height: 35px;
+    padding-bottom: 2rem;
+    padding-left: 6rem;
+  }
+  .navbar{
+    width: 26rem;
+  }
+  #catalog {
+    padding-left: 26px;
+}
+  
+  .nav ul{
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 71px;
+    background-color: none;
+  }
+ .navbarlist{
+  display: none;
+ }
+  .navbarlist ul {
+    
+    list-style: none;
+  } 
+  .klelogo{
+    display: none;
+  }
+.logo img {
+
+  width: 22rem;
+  height: 3rem;
+  padding-left: 0rem;
+  padding-right: 2rem;
+}
+.App {
+  width: 26rem;
+  height: auto;
+}
+.nav-links{
+  display: none;
+}
+.image-background{
+  width: 26rem;
+}
+.resourcenavbarlist{
+  display: none;
+}
+.testimonials{
+  width: 26rem;
+  display: flex;
+}
+.container-md, .container-sm, .container {
+width: 68rem;
+}
+.testimonials {
+  padding-top: 2rem;
+    height: 48rem;
+}
+.home-testimonial-bottom {
+  margin-top: 6px;
+  top: 10rem;
+}
+#welcome{
+  background-color: #ffffff;
+    padding-left: 10px;
+    border-radius: 5px;
+    text-align: left;
+    padding-top: 19px;
+    width: 26rem;
+}
+.header-container p{
+  padding-right: 5rem;
+  padding-top: 6rem;
+  width: 26rem;
+  font-size: 15px;
+}
+
+.home-testimonial {
+  height: 59rem;
+  width: 23rem;
+}
+#employee-table{
+  width: 26rem;
+}
+
+input{
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+}
+
+.toggle{
+position: absolute;
+height: 29px;
+    width: 29px;
+    top: 23px;
+    left: 16px;
+z-index: 1;
+cursor: pointer;
+border-radius: 2px;
+background-color: #fff;
+box-shadow: 0 0 10px rgb(0, 0, 0.3);
+}
+
+.toggle .common{
+position: absolute;
+height: 2px;
+width: 20px;
+background-color: #8000ff;
+border-radius: 50px;
+transition: 0.3s ease;
+}
+
+.toggle .top_line{
+top: 30%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.toggle .midle_line{
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.toggle .bottom_line{
+top: 70%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+input:checked ~ .toggle .top_line{
+left: 2px;
+top: 14px;
+width: 25px;
+transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .bottom_line{
+left: 2px;
+top: 14px;
+width: 25px;
+transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .midle_line{
+opacity: 0;
+transform: translateX(20px);
+}
+
+
+input:checked ~ .hamnavbar{
+transform: translateX(0);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5s);
+}
+/* .hamnavbar{
+  width:2rem;
+  text-decoration: none;
+  background-color: #d6d5d5;
+
 } */
-
-
-.testimonials1{
-  width: 401px;
-  padding-left: 372px;
+nav ul{
+  padding-left: 4rem;
+  padding-right: 9rem;
+}
+nav li{
+  border-bottom: 1px solid #bd2e32;
+}
+.overlay{
+  width: 26rem;
+  height: 20rem;
+}
+.grid-container {
+  height: 20rem;
+}
+.content {
+  width: 26rem;
+  padding-top: 18rem;
+}
+.carousel img {
+  height: 20rem;
+}
+.welcome-text{
+  width: 16rem;
+}
+.image-background{
+  height: 20.5rem;
+}
+#welcome h2 {
+  color: #bf3337;
+ font-size: 2.2rem;
+  margin-bottom: 21px;
+  font-family: minion-pro,serif;
+  padding-left: 2rem;
+}
+.fsize {
+  font-size: 27px;
+  color: #bd2e32;
+  font-family: minion-pro,serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-left: 3rem;
+}
 }
