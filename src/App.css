@@ -397,7 +397,7 @@ footer a:hover {
   list-style: none;
   display: flex;
   margin: 0;
-  padding-left: 8rem;
+  padding-left: 2rem;
   padding-right: 3rem;
   justify-content: center;
   align-items: center;
@@ -456,9 +456,9 @@ footer a:hover {
 }
 
 .logo img {
-  width: 63rem;
-    height: 4rem;
-    padding-left: 17rem;
+  width: 51rem;
+  height: 4rem;
+  padding-left: 10rem;
 }
 .klelogo{
   width: 74px;

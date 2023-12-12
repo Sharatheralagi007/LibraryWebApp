@@ -17,6 +17,7 @@ import ImageSlider from './Components/ImageSlider';
 import BookCoverflow from './Components/BookCoverflow';
 import Footer from './Components/Footer';
 import Galleryimages from './Components/Galleryimages';
+import Developers from './Components/Developers';
 
 function Home() {
   
@@ -52,6 +53,8 @@ function Home() {
                 <li><a href="#quetionpapers">Question Papers</a></li>
                 <li><a href="#footer">Quick Links</a></li>
                 <li><a href="/gallery">Gallery</a></li>
+                {/* <li><a href="/developers">Developers</a></li> */}
+                
                 
 
                 
@@ -61,6 +64,7 @@ function Home() {
             </nav>
           
           {/* <section></section> */}
+          
           <div className='contentcontainer'>
       <section id="welcome">
         <h2>Welcome to the Library and Information Center</h2>

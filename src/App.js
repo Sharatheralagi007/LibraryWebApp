@@ -12,6 +12,7 @@ import About from './Components/About';
 import NotificationManager from './Components/NotificationManager';
 import Resources from './Components/Resources';
 import { Collection } from 'mongoose';
+import Developers from './Components/Developers';
 
 
 function App() {
@@ -50,24 +51,14 @@ function App() {
         <img src="kleslogo.png" width="64px" />
       </div>
   <div class="logo">
-    <img src='clglogo.png'/>
+    <a href="/"><img src='klelogo.jpg'/></a>
   </div>
  
   <ul class="nav-links">
     <Link to='/'><HomeIcon fontSize="large" /></Link>
-    {/* <li><Link to="/about">About Us</Link></li> */}
-    {/* <li class="dropdown">
-      <a href="#">Services</a>
-      <div class="dropdown-content">
-        <a href="#resources">E-Learning Resources</a>
-        <a href="#employee-table">Human Resources</a>
-       
-      </div>
-    </li> */}
-    {/* <li><Link to='/catalog'>Catalog</Link></li> */}
     <a href="#"><PhoneIcon fontSize="large" /></a>
     <Link to='/faq'>FAQ</Link>  
-
+    <Link to='/developers'>Developers</Link>  
 
     {/* <li className='dropdown'>
     <a href="#">Quick Links</a>
@@ -94,6 +85,8 @@ function App() {
         <Route path='/resources' Component={Resources}/>
         <Route path='/collection' Component={Collection}/>
         <Route path='/gallery' Component={Galleryimages}/>
+        <Route path='/developers' Component={Developers}/>
+        
 
       </Routes>
     </Router>
