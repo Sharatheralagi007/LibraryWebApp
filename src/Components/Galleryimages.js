@@ -1,4 +1,7 @@
 import React from 'react'
+import '../App.css'
+import './galleryimages.css';
+
 
 const Galleryimages = () => {
   return (
@@ -15,7 +18,9 @@ const Galleryimages = () => {
         
       </ul>
     </nav>
-    <div><img src="" alt="" /></div>
+    <div className='img'><img src="lib1.jpg" alt="" /></div>
+    <div className='img'><img src="lib1.jpg" alt="" /></div>
+    <div className='img'><img src="lib1.jpg" alt="" /></div>
     </div>
   )
 }
