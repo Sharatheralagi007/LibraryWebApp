@@ -1,55 +1,75 @@
-import React, { useEffect, useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import image1 from '../images/library-with-books.jpg'
-// import image2 from '../images/logo192.png'
-function Testimonials() {
-  // const [testimonials, setTestimonials] = useState([]);
+import React, { useEffect } from 'react';
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
 
-  // useEffect(() => {
-  //   // Fetch testimonial data from your database or API
-  //   fetch('your-api-endpoint-for-testimonials')
-  //     .then((response) => response.json())
-  //     .then((data) => setTestimonials(data))
-  //     .catch((error) => console.error('Error fetching testimonials:', error));
-  // }, []);
-  const localImages=[image1]
-  // Check if testimonials is empty
-  // if (testimonials.length === 0) {
-  //   return (
-  //     <section className="testimonials">
-  //       <h2>Testimonials</h2>
-  //       <p>Sorry, there are currently no testimonials available. Please check back later.</p>
-  //     </section>
-  //   );
-  // }
+const Testimonials = () => {
+  useEffect(() => {
+    const testimonialData = [
+      
+      {
+        avatar: 'https://img.freepik.com/free-photo/woman-with-long-hair-yellow-hoodie-with-word-music-it_1340-39068.jpg',
+        name: 'Simonette Lindermann',
+        review: "Mind-blowing discovery! changed my routine. Essential for everyone. A vise advice to all interested. Can't imagine without it!",
+      },
+      
+      // Add other testimonial data here...
+    ];
 
-  // return (
-  //   <section className="testimonials">
-  //     <h2>Testimonials</h2>
-  //     <Carousel showArrows={true} showStatus={false} showThumbs={false} infiniteLoop={true}>
-  //       {testimonials.map((testimonial) => (
-  //         <div key={testimonial.id}>
-  //           <img src={testimonial.imageUrl} alt={testimonial.name} />
-  //           <p>{testimonial.description}</p>
-  //           <p>- {testimonial.name}</p>
-  //         </div>
-  //       ))}
-  //     </Carousel>
-  //   </section>
-  // );
-  return (
-    <section className="testimonials">
-      <h2>Testimonials</h2>
-      <Carousel className='carousel' showArrows={true} showStatus={false} showThumbs={false} infiniteLoop={true}>
-        {localImages.map((imageUrl, index) => (
-          <div key={index}>
-            <img src={imageUrl} alt={`Testimonial ${index + 1}`} />
+    const slideHolder = document.querySelector('#slideHolder');
+
+    for (const testimonial of testimonialData) {
+      slideHolder.innerHTML += `
+        <div class="swiper-slide">
+          <div class="ImgHolder">
+            <img src="${testimonial.avatar}" alt="${testimonial.name}" />
           </div>
-        ))}
-      </Carousel>
-    </section>
+          <div class="ContentHolder">
+            <h3>${testimonial.name}</h3>
+            <p>${testimonial.review}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    const swiper = new Swiper('#craouselContainer', {
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 2.3,
+      loop: true,
+      spaceBetween: 30,
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        depth: 800,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: { delay: 5000 },
+    });
+
+    window.onresize = queryResizer;
+    queryResizer();
+
+    function queryResizer() {
+      if (window.innerWidth < 724) swiper.params.slidesPerView = 2;
+      if (window.innerWidth > 501) swiper.params.slidesPerView = 2;
+      if (window.innerWidth > 724) swiper.params.slidesPerView = 2.3;
+      if (window.innerWidth < 501) swiper.params.slidesPerView = 1;
+      swiper.update();
+    }
+  }, []);
+
+  return (
+    <div className="swiper-container" id="craouselContainer">
+      <div className="swiper-wrapper" id="slideHolder">
+        {/* Slides will be dynamically generated here */}
+      </div>
+      <div className="swiper-pagination"></div>
+    </div>
   );
-}
+};
 
 export default Testimonials;

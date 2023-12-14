@@ -6,26 +6,26 @@ function ImageSlider() {
     <div className="imgslider">
        <Carousel>
         <Carousel.Item interval={3000}>
-          <img src="kleclg.jpg"  height={540} alt="" />
+          <img src="lib1.jpg"  height={600} alt="" />
       
       </Carousel.Item>
 
    
       <Carousel.Item interval={3000}>
-        <img src="clgimg.jpg"  height={540} alt="" />
+        <img src="lib2.jpg"  height={600} alt="" />
       
       </Carousel.Item>
 
       <Carousel.Item interval={3000}>
-        <img src="libimg1.jpg" height={540} alt="" />
+        <img src="lib3.jpg" height={600} alt="" />
       </Carousel.Item>
       
         <Carousel.Item interval={3000}>
-         <img src="libimg2.jpg" height={540} alt="" />
+         <img src="lib4.jpg" height={600} alt="" />
       </Carousel.Item>
       
       <Carousel.Item>
-         <img src="library-with-books.jpg" height={540} alt="" />
+         <img src="lib6.jpg" height={600} alt="" />
 
       </Carousel.Item>
     </Carousel>

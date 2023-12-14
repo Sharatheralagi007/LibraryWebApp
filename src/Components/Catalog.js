@@ -9,7 +9,7 @@ const Catalog = () => {
           <li><a href="/resources">Resources</a></li>
           <li><a href="/catalog">Catalog</a></li>                  
           <li><a href="#quetionpapers">Question Papers</a></li>
-          <li><a href="#quicklinks">Quick Links</a></li>
+          <li><a href="/gallery">Gallery</a></li>
           
           
         </ul>
@@ -35,4 +35,4 @@ const Catalog = () => {
   )
 }
 
-export default Catalog
+export default Catalog;

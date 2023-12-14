@@ -3,6 +3,8 @@
       font-size: 44px;
       margin-bottom: 20px;
       font-family: minion-pro,serif;
+      width: 100%;
+      height: auto;
   }
   .reslinks li:hover{
     color: yellow;
@@ -12,17 +14,38 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgb(0 0 0 / 53%);
-    height:375px;
+    height: 23rem;
     padding-left: 0px;
     font-family: minion-pro,serif;
     position: sticky;
-    top: 143px;
+    top: 9rem;
 
 }
-.flex-container{
-  display: flex;
-  justify-content: space-between;
-  display: flex;
-  justify-content: space-between;
-  width: -16px;
+
+
+@media screen and (max-width: 900px) {
+  .resourcenavbarlist{
+    display: none;
+  }
+
+  #resources{
+    width: 28rem;
+  }
+
+section {
+  padding-left: 2rem;
+  padding-right: 3rem;
+  width: 26rem;
+}
+.img img{
+  width: 25rem;
+}
+.employee-table{
+  width: 24rem;
+}
+.contact-details{
+  width: 53rem;
+}
+
+
 }
