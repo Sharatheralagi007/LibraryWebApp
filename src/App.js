@@ -43,6 +43,7 @@ function App() {
                 <li className='list'><a href="#quetionpapers">Question Papers</a></li>
                 <li className='list'><a href="#footer">Quick Links</a></li>
                 <li className='list'><a href="/gallery">Gallery</a></li>
+                <li className='list'><a href="/developers">Developers </a></li>
       </ul>
       </div>
       </label>
@@ -51,7 +52,7 @@ function App() {
         <img src="kleslogo.png" width="64px" />
       </div>
   <div class="logo">
-    <a href="/"><img src='klelogo.jpg'/></a>
+    <a href="/"><img src='clglogo.png'/></a>
   </div>
  
   <ul class="nav-links">
