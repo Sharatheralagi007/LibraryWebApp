@@ -27,7 +27,9 @@ function NotificationComponent() {
   return (
     <div className={`notification-box ${isCollapsed ? 'collapsed' : ''}`}>
       <button className="collapse-button" onClick={toggleCollapse}>
-        {isCollapsed ? 'Show Notifications' : 'Hide Notifications'}
+        {isCollapsed ? (<span class="material-symbols-outlined">
+notifications
+</span>) : 'Hide Notifications'}
       </button>
       {!isCollapsed && (
         <div className="notification-content">

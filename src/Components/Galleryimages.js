@@ -21,6 +21,8 @@ const Galleryimages = () => {
     <div className='img'><img src="lib1.jpg" alt="" /></div>
     <div className='img'><img src="lib1.jpg" alt="" /></div>
     <div className='img'><img src="lib1.jpg" alt="" /></div>
+   
+
     </div>
   )
 }

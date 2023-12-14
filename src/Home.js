@@ -46,7 +46,7 @@ function Home() {
       <nav className='navbarlist'>
     
               <ul>
-              <li><Link to="#app">Home</Link></li>
+              <li><Link to="#welcome">Home</Link></li>
                 <li><a href="/resources">Resources</a></li>
                 <li><a href="/catalog">Catalog</a></li>
                 <li><a href="#collection">Collections</a></li>
