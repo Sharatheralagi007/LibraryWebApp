@@ -14,16 +14,21 @@ import Collections from './Components/Collection';
 import { Link } from 'react-router-dom';
 import './Components/Resources.css';
 import ImageSlider from './Components/ImageSlider';
-
+import BookCoverflow from './Components/BookCoverflow';
+import Footer from './Components/Footer';
+import Galleryimages from './Components/Galleryimages';
+import Developers from './Components/Developers';
 
 function Home() {
   
   return (
-    <div className="App">
+    <div id="app" className="App">
       {/* <header className="header-container">
         <img src="library-with-books.jpg" alt="Library Banner" />
         <h1>Welcome to the "Jnana Chetana"</h1>
       </header> */}
+
+      
       <div class="header-container">
             <div>
             <div className='image-background'> <ImageSlider/></div>
@@ -39,19 +44,27 @@ function Home() {
       </div>    
       <main className="flex-container">       
       <nav className='navbarlist'>
+    
               <ul>
-                <li><a href="#welcome">About Us</a></li>
+              <li><Link to="#app">Home</Link></li>
                 <li><a href="/resources">Resources</a></li>
                 <li><a href="/catalog">Catalog</a></li>
                 <li><a href="#collection">Collections</a></li>
                 <li><a href="#quetionpapers">Question Papers</a></li>
-                <li><a href="#quicklinks">Quick Links</a></li>
+                <li><a href="#footer">Quick Links</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                {/* <li><a href="/developers">Developers</a></li> */}
+                
+                
+
                 
                 
               </ul>
+           
             </nav>
           
-          <section></section>
+          {/* <section></section> */}
+          
           <div className='contentcontainer'>
       <section id="welcome">
         <h2>Welcome to the Library and Information Center</h2>
@@ -77,111 +90,59 @@ function Home() {
             in maintaining the same. This kind of atmosphere is bound to generate joy and urge to read in
             them and further radiate it to everyone inside the Library.</p>
                   </section> 
-            <div className='testimonials'>
-              {/* <div className='testimonials2'><Testimonials/> </div> */}
-              {/* <div className='testimonials1'><NewArrivals/> </div> */}
-            </div>
-         
+            
+         <BookCoverflow/>
+         {/* <NewArrivals/> */}
       <div  id='collection' className="collection">
         <Collections/>
       </div>
-      
-     
-      
-    <section id="services">
-        Services content
-      </section>
-      
-<section id='employee-table'>
-  <div>
-      <h2>Human Resource</h2>
-      <table className="employee-table">
-        <thead>
-          <tr>
-            <th>SL</th>
-            <th>Name of Employee</th>
-            <th>Designation</th>
-            <th>Qualification</th>
-            <th>Experience in Yrs</th>
-            <th>Phone No</th>
-            <th>E-mail IDs</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Dr. Satish V. Totar</td>
-            <td>Librarian &amp; HOD</td>
-            <td>M.L.I.Sc., M.phil, PGDLAN, KSET Ph.D</td>
-            <td>13.5</td>
-            <td>9972500355</td>
-            <td>satishtotar@klescet.ac,in</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Shri. R. B. Chinnannavar</td>
-            <td>Asst. Librarian</td>
-            <td>M.L.I.Sc.</td>
-            <td>34</td>
-            <td>9448691451</td>
-            <td>ravibc67@yahoo.co.in</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Shri. S.K. Chougala</td>
-            <td>Asst. Librarian</td>
-            <td>M.L.I.Sc.</td>
-            <td>18</td>
-            <td>8277797978</td>
-            <td>chougalasatish@gmail.com</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Shri. S. R. Gadag</td>
-            <td>Lib.Asst.</td>
-            <td>M.L.I.Sc.</td>
-            <td>14</td>
-            <td>9632459987</td>
-            <td>srgadag71@gmail.com</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Shri. Anigolmath</td>
-            <td>Attender</td>
-            <td>C.L.I.Sc</td>
-            <td>8.5</td>
-            <td>7349609102</td>
-            <td>Bassumath9@gmail.com</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Shri. B.M. Hiremath</td>
-            <td>Attender</td>
-            <td>PUC</td>
-            <td>8</td>
-            <td>8277448399</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="col-md-12 d-flex justify-content-center">
+                <h2>Testimonials of Library</h2>
+            </div>     
+<div className="testimonials">
+ <section class="home-testimonial">
+    <div class="container-fluid">
+        <div class="home-testimonial-bottom">
+            <div class="container testimonial-inner">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-4 style-3">
+                        <div class="tour-item ">
+                            <div class="tour-desc bg-white">
+                                <div class="tour-text color-grey-3 text-center">&ldquo;At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.&rdquo;</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg" alt=""/></div>
+                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
+                                <div class="link-position d-flex justify-content-center">Student</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 style-3">
+                        <div class="tour-item ">
+                            <div class="tour-desc bg-white">
+                                <div class="tour-text color-grey-3 text-center">&ldquo;At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.&rdquo;</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/></div>
+                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
+                                <div class="link-position d-flex justify-content-center">Student</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 style-3">
+                        <div class="tour-item ">
+                            <div class="tour-desc bg-white">
+                                <div class="tour-text color-grey-3 text-center">&ldquo;At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.&rdquo;</div>
+                                <div class="d-flex justify-content-center pt-2 pb-2"><img class="tm-people" src="https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/></div>
+                                <div class="link-name d-flex justify-content-center">Balbir Kaur</div>
+                                <div class="link-position d-flex justify-content-center">Student</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div className="contact-details">
-        <h3>Contact To- HOD and Librarian</h3>
-        <p>
-          <strong>Dr. Satish V. Totar</strong>
-          
-           Library and Information Center
-          
-           Dr. M.S. Sheshgiri College of Engineering and Technology
-          
-          ag, Belgaum – 590008
-          
-          8312440322 Ext 119
-          
-          o: <a href="mailto:satishtotar@klescet.ac.in">satishtotar@klescet.ac.in</a>
-        </p>
-      </div>
 </section>
+</div> 
+      
+
 <div id='rules'>
 <LibraryRules/>
 </div>
@@ -212,9 +173,9 @@ function Home() {
      </main>
     <NotificationComponent/>
     <></>
-      <footer>
-        Footer content
-      </footer>
+    <div id="footer">
+      <Footer/>
+      </div>
     </div>
   )
 }

@@ -7,20 +7,25 @@
     grid-template-rows: repeat(2, 100px);
     gap: 10px;
     border-bottom: 5px solid #ffc72c;
-    height: 262px;
+    height: 17rem;
   }
   
   .grid-item {
     /* padding: 30px; */
     text-align: center;
     font-size: 20px;
-    padding-top: 11px;
+    padding-top: 2rem;
     font-family: minion-pro,serif;
     font-weight: bold;
   }
   .grid-item h3{
     font-size: 32px;
-    margin-bottom: 0px;
+    margin-bottom: -25px;
   }
+ @media screen and (max-width:415px) {
+  .grid-container{
+    height: 20rem;
+}
+} 
 
   

@@ -1,0 +1,37 @@
+
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2rem;
+  }
+  
+  .card {
+    width: 19rem; /* Adjust the width as needed */
+    margin: 10px; /* Adjust margin for spacing between cards */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    text-align: center;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .image {
+    width: 30px; /* Adjust the width of the icons as needed */
+    height: 30px; /* Adjust the height of the icons as needed */
+  }
+  
