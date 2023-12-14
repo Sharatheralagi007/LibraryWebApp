@@ -1,4 +1,8 @@
 .img img{
-    height: 50rem;
-    width: 50rem;
+    height: 14rem;
+    width: 26rem;
+    display: flex;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    /* flex-wrap: wrap; */
 }
