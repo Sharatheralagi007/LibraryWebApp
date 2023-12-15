@@ -84,12 +84,12 @@ function App() {
         <Route path='/faq' Component={LibraryFAQ}/>
         <Route path='/catalog' Component={Catalog}/>
         <Route path='/about' Component={About}/>
-        <Route path='/managenotifications' Component={NotificationManager}/>
+        {/* <Route path='/' Component={NotificationManager}/> */}
         <Route path='/resources' Component={Resources}/>
         <Route path='/collection' Component={Collection}/>
         <Route path='/gallery' Component={Galleryimages}/>
         <Route path='/developers' Component={Developers}/>
-        <Route path='/m' Component={Loginauth}/>
+        <Route path='/admin' Component={Loginauth}/>
 
         
 
