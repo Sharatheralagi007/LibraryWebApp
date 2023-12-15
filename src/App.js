@@ -13,6 +13,8 @@ import NotificationManager from './Components/NotificationManager';
 import Resources from './Components/Resources';
 import { Collection } from 'mongoose';
 import Developers from './Components/Developers';
+import Footer from './Components/Footer';
+import Loginauth from './Components/Loginauth';
 
 
 function App() {
@@ -87,10 +89,15 @@ function App() {
         <Route path='/collection' Component={Collection}/>
         <Route path='/gallery' Component={Galleryimages}/>
         <Route path='/developers' Component={Developers}/>
+        <Route path='/m' Component={Loginauth}/>
+
         
 
       </Routes>
     </Router>
+    <div id="footer">
+      <Footer/>
+      </div>
     </>
   );
 }

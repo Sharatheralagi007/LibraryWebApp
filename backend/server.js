@@ -179,6 +179,28 @@ app.delete('/isbn/:id', async (req, res) => {
   }
 });
 
+const userSchema = new mongoose.Schema({
+  username: String,
+  password: String,
+});
+
+const User = mongoose.model('User', userSchema);
+
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await User.findOne({ username, password });
+    if (user) {
+      res.json({ success: true });
+    } else {
+      res.json({ success: false });
+    }
+  } catch (error) {
+    console.error('Error during login:', error.message);
+    res.status(500).json({ success: false, error: 'An error occurred. Please try again.' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
