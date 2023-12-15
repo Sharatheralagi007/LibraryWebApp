@@ -63,6 +63,8 @@ function NotificationManager() {
 
   return (
     <>
+    <div className="isbncontainer">
+    <div>
     <div>
       <h1>Notification Manager</h1>
 
@@ -87,7 +89,7 @@ function NotificationManager() {
       {/* List of notifications */}
       <div>
         <h2>Notifications</h2>
-        <ul>
+        <ul className='notification-content'>
           {notifications.map((notification) => (
             <li key={notification._id}>
               <strong>{notification.title}</strong>
@@ -98,7 +100,11 @@ function NotificationManager() {
         </ul>
       </div>
     </div>
+    </div>
+    <div>
     <ISBNmanager/>
+    </div>
+    </div>
       </>
   );
 }
