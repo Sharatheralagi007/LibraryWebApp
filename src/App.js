@@ -27,7 +27,7 @@ function App() {
     <Router>
     <div className="navbar">
       <label>
-      <input type="checkbox" />
+      <input className='haminput' type="checkbox" />
       <div className="toggle">
         <span className='top_line common'></span>
         <span className='midle_line common'></span>
