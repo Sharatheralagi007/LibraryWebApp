@@ -13,7 +13,7 @@ function ISBNmanager() {
 
   const fetchISBNs = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/isbn'); // Replace with your backend server URL
+      const response = await axios.get('/isbn'); // Replace with your backend server URL
       setIsbnList(response.data);
     } catch (error) {
       console.error('Error fetching ISBNs:', error);
@@ -22,7 +22,7 @@ function ISBNmanager() {
 
   const handleAddISBN = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/isbn', { isbn });
+      const response = await axios.post('/isbn', { isbn });
       setMessage(response.data.message);
       setIsbn('');
       fetchISBNs(); // Fetch updated ISBN list after adding a new one
@@ -34,7 +34,7 @@ function ISBNmanager() {
 
   const handleDeleteISBN = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/isbn/${id}`);
+      await axios.delete(`/isbn/${id}`);
       setMessage('ISBN deleted successfully.');
       fetchISBNs(); // Fetch updated ISBN list after deletion
     } catch (error) {
@@ -58,13 +58,17 @@ function ISBNmanager() {
       {message && <p>{message}</p>}
       <h2>ISBN List</h2>
       <ul>
-        {isbnList.map((item) => (
-          <li key={item._id}>
-            {item.isbn}
-            <button onClick={() => handleDeleteISBN(item._id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+  {Array.isArray(isbnList) && isbnList.length > 0 ? (
+    isbnList.map((item) => (
+      <li key={item._id}>
+        {item.isbn}
+        <button onClick={() => handleDeleteISBN(item._id)}>Delete</button>
+      </li>
+    ))
+  ) : (
+    <p>No ISBNs available</p>
+  )}
+</ul>
     </div>
   );
 }

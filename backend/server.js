@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors =require('cors')
 const connectDB = require('../public/DB/Dbconnect');
 const Notification = require('../public/DB/Schema');
+const path = require("path");
+
 const ISBN = require('../public/DB/isbnschema');
 // const Notification = require('../pu');
 
@@ -47,6 +49,20 @@ app.use(bodyParser.json());
 //     res.status(500).json({ message: 'Failed to create notification' });
 //   }
 // });
+const __dirname1 = path.resolve();
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname1, "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("API running succesfully");
+  });
+}
+
+
+
 app.post('/notifications', async (req, res) => {
   try {
     const { title, content } = req.body;

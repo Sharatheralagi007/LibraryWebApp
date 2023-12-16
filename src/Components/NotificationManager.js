@@ -14,7 +14,7 @@ function NotificationManager() {
 
   const fetchNotifications = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/notifications'); // Replace with your backend server URL
+      const response = await axios.get('/notifications'); // Replace with your backend server URL
       setNotifications(response.data);
     } catch (error) {
       console.error('Error fetching notifications:', error);
@@ -37,7 +37,7 @@ function NotificationManager() {
     try {
       const data = { title: newTitle, content: newContent };
       console.log('sda');
-     await axios.post('http://localhost:5000/notifications', data, {
+     await axios.post('/notifications', data, {
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': 'http://localhost:5000',
@@ -54,7 +54,7 @@ function NotificationManager() {
 
   const deleteNotification = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/notifications/${id}`); // Replace with your backend server URL
+      await axios.delete(`/notifications/${id}`); // Replace with your backend server URL
       fetchNotifications();
     } catch (error) {
       console.error('Error deleting notification:', error);
@@ -88,7 +88,8 @@ function NotificationManager() {
 
       {/* List of notifications */}
       <div>
-        <h2>Notifications</h2>
+      <h2>Notifications</h2>
+      {Array.isArray(notifications) && notifications.length > 0 ? (
         <ul className='notification-content'>
           {notifications.map((notification) => (
             <li key={notification._id}>
@@ -98,7 +99,10 @@ function NotificationManager() {
             </li>
           ))}
         </ul>
-      </div>
+      ) : (
+        <p>No notifications available</p>
+      )}
+    </div>
     </div>
     </div>
     <div>

@@ -10,7 +10,7 @@ const BookCoverflow = () => {
 
   useEffect(() => {
     // Fetch ISBNs from your database (replace with your actual API endpoint)
-    axios.get('http://localhost:5000/isbn')
+    axios.get('/isbn')
       .then((response) => {
         setIsbnList(response.data); // Assuming response.data is an array of ISBNs
       })
@@ -36,9 +36,14 @@ const BookCoverflow = () => {
     };
 
     // Iterate through the ISBN list and fetch book details
-    isbnList.forEach((isbn) => {
-      fetchBookDetails(isbn);
-    });
+    if (Array.isArray(isbnList)) {
+      isbnList.forEach((isbn) => {
+        fetchBookDetails(isbn);
+      });
+    } else {
+      console.error('isbnList is not an array');
+    }
+    
   }, [isbnList]);
 
   const settings = {
